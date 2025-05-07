@@ -1,0 +1,254 @@
+/* ===== CSS for ISKCON Live Classes Sections ===== */
+.section {
+    padding: 4rem 1.5rem;
+    position: relative;
+  }
+  
+  .section:nth-child(even) {
+    background-color: #fff;
+  }
+  
+  .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .section h2 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ff6b00;
+  }
+  
+  .section p {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Schedule List Styles */
+  .schedule-list {
+    list-style: none;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .schedule-list li {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .schedule-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .highlight {
+    font-weight: 600;
+    color: #ff6b00;
+  }
+  
+  .reminder-text {
+    font-style: italic;
+    color: #8e44ad;
+    font-weight: 500;
+  }
+  
+  /* How to Join Section */
+  .step-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .join-steps {
+    counter-reset: step-counter;
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .join-steps li {
+    counter-increment: step-counter;
+    margin-bottom: 1.5rem;
+    padding-left: 3rem;
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
+  .join-steps li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #ff6b00;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  /* Button Styles */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background: #ff6b00;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .btn:hover {
+    background: transparent;
+    color: #ff6b00;
+    border-color: #ff6b00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn-secondary {
+    background: #8e44ad;
+  }
+  
+  .btn-secondary:hover {
+    color: #8e44ad;
+    border-color: #8e44ad;
+    background: transparent;
+  }
+  
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  /* Video Grid Styles */
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: #000;
+  }
+  
+  .video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video-wrapper iframe,
+  .fb-video {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .fb-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    background: #2c3e50;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .section {
+      padding: 3rem 1rem;
+    }
+    
+    .section h2 {
+      font-size: 1.75rem;
+    }
+    
+    .video-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .join-steps li {
+      padding-left: 2.5rem;
+      font-size: 1rem;
+    }
+    
+    .btn {
+      width: 100%;
+      padding: 0.75rem;
+    }
+  }
+  
+  /* Accessibility Focus Styles */
+  .btn:focus {
+    outline: 3px solid #8e44ad;
+    outline-offset: 2px;
+  }
+  
+  /* Animation Effects */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .section {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .section:nth-child(2) { animation-delay: 0.1s; }
+  .section:nth-child(3) { animation-delay: 0.2s; }
+  .section:nth-child(4) { animation-delay: 0.3s; }
+  .section:nth-child(5) { animation-delay: 0.4s; }

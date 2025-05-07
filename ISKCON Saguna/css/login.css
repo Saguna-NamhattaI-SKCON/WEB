@@ -1,0 +1,259 @@
+:root {
+  /* Color System */
+  --primary: #4361ee;
+  --primary-hover: #3a56d4;
+  --primary-focus: rgba(67, 97, 238, 0.15);
+  --error: #ef233c;
+  --error-bg: rgba(239, 35, 60, 0.03);
+  --success: #2ecc71;
+  --text-dark: #2b2d42;
+  --text-medium: #4a4e69;
+  --text-light: #6c757d;
+  --border: #ced4da;
+  --border-light: #e9ecef;
+  --disabled: #adb5bd;
+  --white: #ffffff;
+  
+  /* Elevation */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 15px 50px rgba(0, 0, 0, 0.15);
+  
+  /* Shape */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  /* Motion */
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Styles */
+.login-container {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  width: min(100% - 2rem, 440px);
+  padding: clamp(2rem, 5vw, 3rem);
+  transition: var(--transition);
+  border: 1px solid var(--border-light);
+  margin-inline: auto;
+  margin-block: 2rem;
+}
+
+.login-container:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Typography */
+.login-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.login-header h2 {
+  color: var(--text-dark);
+  font-size: clamp(1.5rem, 4vw, 1.75rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+}
+
+.login-header p {
+  color: var(--text-light);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Form Elements */
+.input-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-medium);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+  transition: var(--transition-fast);
+  background-color: var(--white);
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+.input-group input::placeholder {
+  color: var(--text-light);
+  opacity: 0.6;
+}
+
+.input-group input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary-focus);
+}
+
+.input-group input.error {
+  border-color: var(--error);
+  background-color: var(--error-bg);
+}
+
+/* Feedback States */
+.error-message {
+  color: var(--error);
+  font-size: 0.8125rem;
+  margin-top: 0.5rem;
+  display: block;
+  min-height: 1.125rem;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: var(--transition);
+}
+
+.error-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button Styles */
+.login-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.login-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.login-btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.login-btn:disabled {
+  background: var(--disabled);
+  cursor: not-allowed;
+}
+
+.login-btn.success {
+  background: var(--success);
+}
+
+/* Animations */
+.shake-animation {
+  animation: shake 0.4s ease-in-out;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--white);
+  animation: spin 0.8s linear infinite;
+}
+
+.success-checkmark {
+  width: 1.125rem;
+  height: 1.125rem;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: var(--transition);
+}
+
+.login-btn.success .success-checkmark {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  15%, 45%, 75% { transform: translateX(-5px); }
+  30%, 60%, 90% { transform: translateX(5px); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+    border: none;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .login-header {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Accessibility Enhancements */
+.input-group input:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .login-container,
+  .login-btn,
+  .input-group input {
+    transition: none !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .login-container {
+    box-shadow: none;
+    border: 1px solid var(--border);
+    page-break-inside: avoid;
+  }
+  
+  .login-btn {
+    background: var(--text-dark) !important;
+    color: var(--white) !important;
+  }
+}

@@ -1,0 +1,169 @@
+/* 1️⃣ Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Clean and modern font */
+    color: #333; /* Default text color */
+    line-height: 1.6; /* Improved readability */
+    background-color: #f0f4f8; /* Light background color for a soft look */
+}
+
+/* 2️⃣ Header Styling */
+header {
+    background-color: #ffcc00; /* ISKCON yellow background */
+    color: #333; /* Dark text color for contrast */
+    text-align: center; /* Center the header content */
+    padding: 20px; /* Adequate space around the header content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header h1 {
+    margin: 0; /* Remove margin to prevent unnecessary space */
+    font-size: 2.5rem; /* Larger text size for the header */
+    font-weight: 700; /* Bold font weight for emphasis */
+}
+
+/* 3️⃣ Container for the Main Content */
+.container {
+    max-width: 800px; /* Maximum width for better readability */
+    margin: 40px auto; /* Center the container horizontally with margin */
+    padding: 30px; /* Add padding around the content */
+    background-color: #ffffff; /* White background for the form */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    border-radius: 10px; /* Rounded corners for smooth edges */
+}
+
+/* 4️⃣ Text within the Container */
+.container p {
+    text-align: center; /* Center the paragraph text */
+    font-size: 1.1rem; /* Slightly larger text for better readability */
+    color: #555; /* Dark grey text color for better contrast */
+    margin-bottom: 20px; /* Add space below the paragraph */
+}
+
+/* 5️⃣ Form Styling */
+form {
+    display: flex; /* Use flexbox to align form elements in a column */
+    flex-direction: column; /* Stack the form elements vertically */
+    gap: 20px; /* Space between form elements */
+}
+
+/* 6️⃣ Labels for Each Input Field */
+form label {
+    font-size: 1rem; /* Standard font size for labels */
+    margin-bottom: 5px; /* Space between label and input */
+    color: #333; /* Dark grey color for label text */
+}
+
+/* 7️⃣ Inputs and Textarea Fields */
+form input,
+form textarea {
+    font-size: 1rem; /* Standard font size */
+    padding: 12px; /* Add padding inside the fields */
+    margin-bottom: 15px; /* Space between each input field */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners for input fields */
+    width: 100%; /* Make inputs take full width of the container */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Remove number input spinners in number fields */
+form input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+    -webkit-appearance: none; /* Safari/Chrome */
+}
+
+/* Textarea Styling */
+form textarea {
+    resize: vertical; /* Allow vertical resizing for better user experience */
+}
+
+/* 8️⃣ Submit Button Styling */
+form button {
+    background-color: #007bff; /* Blue background for the button */
+    color: white; /* White text */
+    font-size: 1rem; /* Standard font size */
+    padding: 12px; /* Add padding inside the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effect for hover */
+}
+
+/* Button Hover Effect */
+form button:hover {
+    background-color: #0056b3; /* Darker blue when hovering */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* 9️⃣ Success Message Styling */
+.success-message {
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    text-align: center; /* Center align the messages */
+    padding: 15px; /* Add padding around the message */
+    margin-top: 20px; /* Add space above the message */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.1rem; /* Slightly larger text for emphasis */
+    display: none; /* Initially hidden */
+}
+
+/* 10️⃣ Error Message Styling */
+.error-message {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    text-align: center; /* Center align the messages */
+    padding: 15px; /* Add padding around the message */
+    margin-top: 20px; /* Add space above the message */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.1rem; /* Slightly larger text for emphasis */
+    display: none; /* Initially hidden */
+}
+
+/* 11️⃣ Media Query for Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Adjust container for smaller screens */
+    .container {
+        padding: 20px; /* Reduce padding */
+        margin: 10px; /* Reduce margin */
+    }
+
+    /* Adjust header size for smaller screens */
+    header h1 {
+        font-size: 2rem; /* Slightly smaller font size */
+    }
+
+    /* Adjust label font size */
+    form label {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    /* Adjust input field font size */
+    form input,
+    form textarea {
+        font-size: 0.9rem; /* Smaller font size */
+        padding: 10px; /* Smaller padding */
+    }
+
+    /* Adjust button size */
+    form button {
+        font-size: 0.9rem; /* Smaller font size */
+        padding: 10px; /* Smaller padding */
+    }
+}
+
+/* 12️⃣ Accessibility Enhancements */
+input:focus-visible, textarea:focus-visible {
+    outline: 2px solid #007bff; /* Outline for accessibility */
+    outline-offset: 2px; /* Space between outline and element */
+}

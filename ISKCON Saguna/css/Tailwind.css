@@ -1,0 +1,74 @@
+/* Tailwind CSS Utility Classes for ISKCON Raghunathpur Website */
+
+/* General Styles */
+body {
+    @apply bg-gray-100 text-gray-800 font-sans; /* Clean font style */
+}
+
+/* Main Content */
+main {
+    @apply container mx-auto px-4 sm:px-8 py-8; /* Centered container with responsive padding */
+}
+
+section {
+    @apply mb-8; /* Margin bottom for spacing between sections */
+}
+
+/* Headings */
+h1 {
+    @apply text-4xl font-bold mb-6 text-center; /* Main heading style */
+}
+
+h2 {
+    @apply text-3xl font-bold mb-4; /* Subheading style */
+}
+
+h3 {
+    @apply text-2xl font-semibold mb-3; /* Smaller heading style */
+}
+
+/* Paragraphs */
+p {
+    @apply text-gray-700 mb-4; /* Paragraph text style */
+}
+
+/* Buttons */
+.btn {
+    @apply bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-200; /* Button styles */
+}
+
+/* Accessibility */
+:focus {
+    @apply outline-none ring-2 ring-blue-500; /* Clear focus outline with blue ring */
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    main {
+        @apply px-2; /* Reduce padding on smaller screens */
+    }
+}
+
+/* Additional Styles for Components */
+.service-card {
+    @apply bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300; /* Service card styles */
+}
+
+.service-card h3 {
+    @apply text-xl font-semibold text-center; /* Service card heading */
+}
+
+.footer {
+    @apply bg-gray-800 text-white py-4; /* Footer styles */
+}
+
+.footer p {
+    @apply text-center; /* Centered footer text */
+}
+
+/* Responsive Utilities */
+@media (min-width: 640px) {
+    .hidden {
+        @apply hidden; /* Hide elements on larger screens */
+    }
+}

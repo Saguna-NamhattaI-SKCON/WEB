@@ -1,0 +1,309 @@
+/* ========== 1️⃣ MOBILE-FIRST DESIGN ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.5;
+    color: #333; /* Text color */
+}
+
+/* ========== 2️⃣ RESPONSIVE CONTAINER ========== */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem; /* 20px */
+}
+
+/* ========== 3️⃣ TYPOGRAPHY ========== */
+h1, h2, h3, h4, h5, h6 {
+    font-size: clamp(1.125rem, 2vw + 1rem, 1.5rem); /* Responsive font sizes */
+    line-height: 1.2;
+    margin-bottom: 1rem; /* Space below headings */
+}
+
+/* ========== 4️⃣ LAYOUT COMPONENTS ========== */
+.section {
+    padding: 1.25rem 0; /* Padding for sections */
+}
+
+img {
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* ========== 5️⃣ INTERACTIVE ELEMENTS ========== */
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem; /* Button padding */
+    font-size: 1rem; /* Button font size */
+    border-radius: 0.3125rem; /* Rounded corners */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+
+.button:active {
+    transform: scale(0.98); /* Slightly pressed effect */
+}
+
+/* ========== 6️⃣ LINKS ========== */
+a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 0.625rem; /* Padding for links */
+    display: inline-block; /* Block display for better clickability */
+    transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+a:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+
+/* =====🌺 10/10 ISKCON ULTIMATE FOOTER 🌺===== */
+/* Vedic Wisdom × Modern Excellence × Divine Experience */
+
+/* =====🕉️ Cosmic Design System 🕉️===== */
+:root {
+    /* Divine Color System */
+    --primary: #1a7f6b;          /* Tulasi's Eternal Green */
+    --primary-hover: #145e4f;    /* Dharma's Depth */
+    --accent: #ffd700;           /* Krishna's Golden Touch */
+    --text: #FFD700;                /* Shastric Wisdom */
+    --surface: rgba(255, 255, 255, 0.98);
+    --border: rgba(26, 127, 107, 0.15);
+    
+    /* Sacred Geometry */
+    --radius: 20px;              /* Mandala Curves */
+    --transition: cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    
+    /* Universal Rhythm */
+    --spacing-xl: 4rem;          /* Cosmic Breathing */
+    --spacing-lg: 2rem;
+    --spacing-md: 1rem;
+    
+    /* Divine Typography */
+    --mantra-font: 'Times New Roman', 'Sanskrit Text', serif;
+    --bg-pattern: url('data:image/svg+xml,<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 2.548l-6.295 6.407L2.548 16l6.407 6.295L16 29.452l6.295-6.407L29.452 16l-6.407-6.295L16 2.548z" fill="%231a7f6b" opacity="0.05"/></svg>');
+}
+
+/* =====🪔 Divine Reset 🪔===== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* =====🌌 Footer Cosmos 🌌===== */
+.iskcon-footer {
+    background: 
+        var(--bg-pattern),
+        radial-gradient(ellipse at top, var(--surface), rgba(255,255,255,0.9));
+    padding: var(--spacing-xl) 0;
+    position: relative;
+    border-top: 1px solid var(--border);
+    isolation: isolate;
+}
+
+.iskcon-footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        var(--border) 11px,
+        transparent 12px
+    );
+    opacity: 0.15;
+    z-index: -1;
+}
+
+/* =====📿 Sacred Grid 📿===== */
+.footer-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+/* =====📖 Vedic Typography 📖===== */
+.footer-heading {
+    font: 700 1.35rem/1.2 var(--mantra-font);
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.footer-heading::after {
+    content: '🕉️';
+    position: absolute;
+    right: 0;
+    opacity: 0.3;
+    transform: rotate(15deg);
+}
+
+/* =====🪷 Navigation Enlightenment 🪷===== */
+.footer-list {
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text);
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s var(--transition);
+    text-decoration: none;
+    position: relative;
+}
+
+.footer-link::before {
+    content: '';
+    position: absolute;
+    left: -0.5rem;
+    width: 3px;
+    height: 0%;
+    background: var(--primary);
+    transition: height 0.3s var(--transition);
+}
+
+.footer-link:hover {
+    transform: translateX(8px);
+    background: linear-gradient(90deg, rgba(26, 127, 107, 0.05) 50%, transparent);
+}
+
+.footer-link:hover::before {
+    height: 60%;
+}
+
+/* =====📱 Mobile Dharma 📱===== */
+@media (max-width: 48em) {
+    .iskcon-footer {
+        padding: var(--spacing-lg) 0;
+        text-align: center;
+    }
+
+    .footer-heading::after {
+        display: none;
+    }
+
+    .footer-link {
+        justify-content: center;
+        padding: 0.75rem;
+    }
+
+    .footer-link:hover {
+        transform: translateX(0);
+        background: rgba(26, 127, 107, 0.05);
+    }
+}
+
+/* =====🌙 Dark Bhakti 🌙===== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #e2e8f0;
+        --surface: rgba(17, 24, 39, 0.98);
+        --border: rgba(78, 154, 135, 0.15);
+    }
+
+    .iskcon-footer {
+        background: 
+            radial-gradient(ellipse at top, var(--surface), rgba(17, 24, 39, 0.9)),
+            var(--bg-pattern);
+    }
+
+    .footer-link:hover {
+        background: linear-gradient(90deg, rgba(78, 154, 135, 0.1) 50%, transparent);
+    }
+}
+
+/* =====🌀 Performance Mantras 🌀===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* =====🖨️ Print Dharma 🖨️===== */
+@media print {
+    .iskcon-footer {
+        background: transparent !important;
+        border: none;
+    }
+    
+    .footer-link::before,
+    .footer-heading::after {
+        display: none;
+    }
+}
+
+/* =====🌈 Cosmic Enhancements 🌈===== */
+.footer-link:hover {
+    background-position: 100% 0;
+    background-size: 200% 100%;
+}
+
+.social-link {
+    transition: 
+        transform 0.3s var(--transition),
+        opacity 0.3s var(--transition),
+        filter 0.3s var(--transition);
+}
+
+.social-link:hover {
+    filter: drop-shadow(0 2px 4px var(--primary));
+    transform: translateY(-2px) scale(1.1);
+}
+
+.footer-copyright {
+    margin-top: var(--spacing-xl);
+    text-align: center;
+    opacity: 0.8;
+    font-size: 0.9em;
+    position: relative;
+    padding-top: var(--spacing-md);
+}
+
+.footer-copyright::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}

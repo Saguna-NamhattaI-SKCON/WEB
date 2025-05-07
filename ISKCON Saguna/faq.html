@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Saguna Namhatta (ISKCON) </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header .logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #005f99;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #004080;
+            border-radius: 5px;
+        }
+
+        .section-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .faq {
+            margin-bottom: 20px;
+        }
+
+        .faq h3 {
+            color: #007acc;
+            margin-bottom: 10px;
+        }
+
+        .faq p {
+            color: #555;
+            margin: 0;
+        }
+
+        footer {
+            background-color: #005f99;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        footer .social-media a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer .social-media a:hover {
+            color: #d1e0ff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/Add a subheading.jpg" alt="ISKCON Logo" class="logo">
+        <h1>ISKCON Raghunathpur</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+            <li><a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+            <li><a href="donations.html"><i class="fas fa-hand-holding-heart"></i> Donate</a></li>
+            <li><a href="live.html"><i class="fas fa-video"></i> Live Classes</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- FAQ Section -->
+    <section class="section-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq">
+            <h3>What is Saguna Namhatta (ISKCON) ?</h3>
+            <p>Saguna Namhatta (ISKCON) is a center dedicated to spreading the teachings of Lord Krishna as presented in the Bhagavad Gita and Srimad Bhagavatam.</p>
+        </div>
+
+        <div class="faq">
+            <h3>How can I participate in events?</h3>
+            <p>You can visit our <a href="events.html">Events</a> page for a complete list of upcoming programs and register for participation.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Are donations tax-deductible?</h3>
+            <p>Yes, all donations to ISKCON Raghunathpur are eligible for tax deductions under Section 80G of the Indian Income Tax Act.</p>
+        </div>
+
+        <div class="faq">
+            <h3>How do I volunteer for temple activities?</h3>
+            <p>You can contact us through our <a href="contact.html">Contact</a> page, and we will guide you on how to get involved as a volunteer.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Saguna Namhatta (ISKCON) . All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/share/14dys6139i/" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="https://youtube.com/@iskconraghunathpur?si=WXyxHMfzsTsslCcy" target="_blank">
+                <i class="fab fa-youtube"></i> YouTube
+            </a>
+        </div>
+    </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = document.querySelectorAll('.faq h3');
+        
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const isVisible = answer.style.display === 'block';
+                
+                // Toggle display of the answer
+                answer.style.display = isVisible ? 'none' : 'block';
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html>

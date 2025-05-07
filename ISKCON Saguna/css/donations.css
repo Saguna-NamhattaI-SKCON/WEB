@@ -1,0 +1,106 @@
+/* 1️⃣ Donation Form Layout */
+
+/* a) Form Container */
+.donation-form {
+    width: 80%; /* Responsive width */
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto; /* Center the form */
+    padding: 20px; /* Padding around the content */
+    background: #f8f9fa; /* Light background color */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* b) Form Title */
+.donation-form h2 {
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Bold font weight */
+    color: #333; /* Darker color for readability */
+    text-align: center; /* Center-align the title */
+    margin-bottom: 16px; /* Space below the title */
+}
+
+/* 2️⃣ Donation Amount Input Fields */
+
+/* a) Amount Input Field */
+.amount-input {
+    padding: 12px; /* Padding inside the input field */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for legibility */
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Space between fields */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition for focus */
+}
+
+.amount-input:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.2); /* Subtle glow effect */
+}
+
+.amount-input::placeholder {
+    color: #aaa; /* Light gray placeholder text */
+}
+
+/* Predefined Donation Amount Options */
+.donation-option {
+    display: inline-block; /* Inline-block for button style */
+    padding: 12px 24px; /* Padding for buttons */
+    font-size: 16px; /* Font size */
+    color: #fff; /* White text */
+    background-color: #007bff; /* Primary color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 10px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Transition for hover */
+}
+
+.donation-option:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+
+/* 3️⃣ Additional Donation Options */
+
+/* a) Checkbox for Recurring Donations */
+.recurring-checkbox {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center vertically */
+    margin-bottom: 20px; /* Space below checkbox */
+}
+
+.recurring-checkbox input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+/* b) Recurring Donation Frequency Dropdown */
+.recurring-dropdown {
+    padding: 12px; /* Padding inside the dropdown */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Space between fields */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition for focus */
+}
+
+.recurring-dropdown:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.2); /* Subtle glow effect */
+}
+
+/* 4️⃣ Donor Details Section */
+
+/* a) Input Fields for Name, Email, etc. */
+.donor-input {
+    padding: 12px; /* Padding for input fields */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Space between fields */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition for focus */
+}
+
+.donor-input:focus {
+    border-color: #007bff; /* Blue

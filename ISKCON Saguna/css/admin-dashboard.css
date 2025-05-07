@@ -1,0 +1,477 @@
+
+  /* Ultra-modern CSS with design tokens and systemized approach */
+  :root {
+    /* Color system */
+    --primary-50: #f0f4ff;
+    --primary-100: #dbe8fe;
+    --primary-200: #bfd7fe;
+    --primary-300: #93bbfd;
+    --primary-400: #5f94fa;
+    --primary-500: #4a6fdc;
+    --primary-600: #3a5bc7;
+    --primary-700: #2e4aa3;
+    --primary-800: #2a3e7d;
+    --primary-900: #28375d;
+    
+    /* Semantic tokens */
+    --color-text: #1a202c;
+    --color-text-secondary: #4a5568;
+    --color-text-tertiary: #718096;
+    --color-border: #e2e8f0;
+    --color-bg: #ffffff;
+    --color-bg-secondary: #f8fafc;
+    --color-success: #38a169;
+    --color-warning: #dd6b20;
+    --color-error: #e53e3e;
+    
+    /* Spacing system */
+    --space-xxs: 0.25rem;
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-xxl: 3rem;
+    
+    /* Typography */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    
+    /* Border radius */
+    --radius-sm: 0.125rem;
+    --radius-md: 0.25rem;
+    --radius-lg: 0.375rem;
+    --radius-xl: 0.5rem;
+    --radius-full: 9999px;
+    
+    /* Transitions */
+    --transition-fast: 150ms;
+    --transition-normal: 300ms;
+    --transition-slow: 500ms;
+  }
+
+  /* Base reset */
+  .donation-section * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Container system */
+  .donation-section {
+    --container-padding: var(--space-xl);
+    --container-max-width: 80rem;
+    
+    width: 100%;
+    padding: var(--container-padding) var(--space-md);
+    margin: 0 auto;
+    background-color: var(--color-bg);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    max-width: var(--container-max-width);
+  }
+
+  /* Section header */
+  .section-header {
+    margin-bottom: var(--space-xl);
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-text);
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-subtitle {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    max-width: 48ch;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  /* Controls layout */
+  .donation-controls {
+    margin-bottom: var(--space-lg);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  /* Search and filter bar */
+  .search-filter-group {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-md);
+    align-items: center;
+  }
+
+  .search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: var(--space-md);
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--color-text-tertiary);
+    pointer-events: none;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md) var(--space-sm) calc(var(--space-md) * 2 + 1.25rem);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    transition: all var(--transition-fast) ease;
+    appearance: none;
+  }
+
+  .search-input::placeholder {
+    color: var(--color-text-tertiary);
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: var(--primary-400);
+    box-shadow: 0 0 0 3px var(--primary-100);
+  }
+
+  /* Filter dropdown */
+  .filter-dropdown {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .filter-select {
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    cursor: pointer;
+    transition: all var(--transition-fast) ease;
+  }
+
+  .filter-select:focus {
+    outline: none;
+    border-color: var(--primary-400);
+    box-shadow: 0 0 0 3px var(--primary-100);
+  }
+
+  /* Table container */
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+  }
+
+  /* Table styles */
+  .donation-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+
+  .donation-table th {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    text-align: left;
+    padding: var(--space-md);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .donation-table td {
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .donation-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .donation-table tr:hover {
+    background-color: var(--primary-50);
+  }
+
+  /* Column widths */
+  .col-donor { width: 30%; min-width: 200px; }
+  .col-amount { width: 15%; min-width: 120px; }
+  .col-date { width: 20%; min-width: 150px; }
+  .col-method { width: 20%; min-width: 150px; }
+  .col-actions { width: 15%; min-width: 150px; }
+
+  /* Empty state */
+  .empty-state td {
+    padding: var(--space-xxl) var(--space-md);
+    text-align: center;
+  }
+
+  .empty-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--color-text-tertiary);
+  }
+
+  .empty-message svg {
+    width: 3rem;
+    height: 3rem;
+    color: var(--color-border);
+    stroke-width: 1.5;
+  }
+
+  /* Table footer */
+  .table-footer {
+    padding: var(--space-md);
+    background-color: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .table-summary {
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Pagination */
+  .pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .pagination-buttons {
+    display: flex;
+    gap: var(--space-xs);
+  }
+
+  .pagination-btn {
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    cursor: pointer;
+    transition: all var(--transition-fast) ease;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .pagination-btn:hover:not(:disabled) {
+    background-color: var(--primary-50);
+    border-color: var(--primary-300);
+    color: var(--primary-600);
+  }
+
+  .pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .pagination-btn.active {
+    background-color: var(--primary-500);
+    border-color: var(--primary-500);
+    color: white;
+  }
+
+  .page-indicator {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+  }
+
+  /* Payment method badges */
+  .payment-method {
+    display: inline-block;
+    padding: var(--space-xxs) var(--space-sm);
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .payment-method.credit {
+    background-color: #e6f7ff;
+    color: #1890ff;
+  }
+
+  .payment-method.bank {
+    background-color: #f6ffed;
+    color: #52c41a;
+  }
+
+  .payment-method.cash {
+    background-color: #fff2e8;
+    color: #fa8c16;
+  }
+
+  .payment-method.upi {
+    background-color: #f0f5ff;
+    color: #2f54eb;
+  }
+
+  /* Action buttons */
+  .btn-view, .btn-receipt {
+    padding: var(--space-xxs) var(--space-sm);
+    border-radius: var(--radius-md);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast) ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xxs);
+  }
+
+  .btn-view {
+    background-color: var(--primary-100);
+    color: var(--primary-700);
+  }
+
+  .btn-view:hover {
+    background-color: var(--primary-200);
+  }
+
+  .btn-receipt {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text);
+  }
+
+  .btn-receipt:hover {
+    background-color: var(--color-border);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .donation-section {
+      --container-padding: var(--space-lg);
+    }
+    
+    .section-title {
+      font-size: var(--text-2xl);
+    }
+    
+    .search-filter-group {
+      grid-template-columns: 1fr;
+    }
+    
+    .donation-table th, 
+    .donation-table td {
+      padding: var(--space-sm);
+    }
+    
+    .col-donor,
+    .col-amount,
+    .col-date,
+    .col-method,
+    .col-actions {
+      width: auto;
+      min-width: 0;
+    }
+    
+    .pagination-controls {
+      flex-direction: column-reverse;
+      align-items: stretch;
+    }
+  }
+
+  /* Print styles */
+  @media print {
+    .donation-section {
+      box-shadow: none;
+      padding: 0;
+      max-width: 100%;
+    }
+    
+    .donation-controls,
+    .col-actions {
+      display: none;
+    }
+    
+    .donation-table {
+      font-size: var(--text-xs);
+    }
+    
+    .donation-table th,
+    .donation-table td {
+      padding: var(--space-xs);
+    }
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-text: #f7fafc;
+      --color-text-secondary: #cbd5e0;
+      --color-text-tertiary: #a0aec0;
+      --color-border: #2d3748;
+      --color-bg: #1a202c;
+      --color-bg-secondary: #2d3748;
+    }
+    
+    .donation-table tr:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .search-input,
+    .filter-select {
+      background-color: var(--color-bg-secondary);
+      border-color: var(--color-border);
+      color: var(--color-text);
+    }
+    
+    .payment-method.credit {
+      background-color: rgba(24, 144, 255, 0.1);
+    }
+    
+    .payment-method.bank {
+      background-color: rgba(82, 196, 26, 0.1);
+    }
+    
+    .payment-method.cash {
+      background-color: rgba(250, 140, 22, 0.1);
+    }
+    
+    .payment-method.upi {
+      background-color: rgba(47, 84, 235, 0.1);
+    }
+  }

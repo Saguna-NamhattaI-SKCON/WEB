@@ -1,0 +1,221 @@
+/* 1️⃣ Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif; /* Clean and modern font */
+    color: #333; /* Default text color */
+    line-height: 1.6; /* Improved readability */
+    background-color: #f4f4f4; /* Light background for the page */
+}
+
+/* 2️⃣ Header Styling */
+header {
+    position: sticky; /* Sticky header */
+    top: 0; /* Stick to the top */
+    background-color: #007acc; /* Header background color */
+    padding: 15px 20px; /* Padding for header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.header-container {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+}
+
+.logo {
+    height: 50px; /* Logo height */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Flexbox for horizontal menu */
+    gap: 20px; /* Space between menu items */
+}
+
+nav a {
+    color: white; /* Menu item color */
+    text-decoration: none; /* Remove underline */
+    padding: 8px 12px; /* Padding for clickable area */
+    border-radius: 5px; /* Rounded corners for hover effect */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+nav a:hover {
+    background-color: rgba(255, 87, 51, 0.8); /* Change background on hover */
+    color: white; /* Keep text color white on hover */
+}
+
+/* 3️⃣ Event Banner */
+.event-banner {
+    position: relative; /* Position for overlay */
+    width: 100%; /* Full width */
+    height: 300px; /* Set height for banner */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.event-banner img {
+    width: 100%; /* Responsive image */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+.banner-overlay {
+    position: absolute; /* Overlay on top of image */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex; /* Center text */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    font-size: 1.5rem; /* Larger font size for visibility */
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s forwards; /* Fade-in effect */
+}
+
+/* 4️⃣ Event Schedule & Details */
+.section-container {
+    max-width: 800px; /* Max width for content */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Padding for content */
+    background: white; /* White background for the section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.event-schedule {
+    margin-top: 20px; /* Space above schedule */
+}
+
+.event-schedule h3 {
+    margin-bottom: 10px; /* Space below heading */
+    font-size: 1.8rem; /* Larger font size for headings */
+    color: #007acc; /* Heading color */
+}
+
+.event-schedule ul {
+    list-style: none; /* Remove bullet points */
+    padding-left: 0; /* Remove padding */
+}
+
+.event-schedule li {
+    padding: 10px; /* Padding for each item */
+    border-bottom: 1px solid #e0e0e0; /* Divider line */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.event-schedule li:hover {
+    background-color: rgba(0, 122, 204, 0.1); /* Light background on hover */
+}
+
+.event-schedule li:last-child {
+    border-bottom: none; /* Remove last border */
+}
+
+/* Countdown Timer */
+.countdown-timer {
+    margin: 20px 0; /* Margin around countdown */
+    text-align: center; /* Center text */
+}
+
+.countdown {
+    font-size: 2rem; /* Large font for countdown */
+    font-weight: bold; /* Bold text */
+    color: #007acc; /* Color for countdown */
+}
+
+/* 5️⃣ Location Section */
+.event-location {
+    margin-top: 20px; /* Space above location section */
+}
+
+.map-container {
+    border-radius: 10px; /* Rounded corners for map */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.map-container iframe {
+    width: 100%; /* Full width for map */
+    height: 300px; /* Set height for map */
+    border: none; /* Remove border */
+}
+
+.view-map {
+    display: inline-block; /* Inline block for button */
+    margin-top: 10px; /* Space above button */
+    padding: 10px 20px; /* Padding for button */
+    background: #007acc; /* Button background */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s ease; /* Smooth transition */
+}
+
+.view-map:hover {
+    background: #005f99; /* Darker background on hover */
+}
+
+/* 6️⃣ Footer */
+footer {
+    background: #007acc; /* Footer background */
+    color: white; /* Footer text color */
+    padding: 20px; /* Padding for footer */
+    text-align: center; /* Center text */
+    position: relative; /* Position for sticky footer */
+}
+
+footer a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+footer a:hover {
+    color: #ff5733; /* Change color on hover */
+}
+
+/* 7️⃣ Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Stack logo and nav vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 10px; /* Space between items */
+    }
+
+    .event-banner {
+        height: 200px; /* Reduce height for mobile */
+    }
+
+    .event-schedule {
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    .countdown {
+        font-size: 1.5rem; /* Smaller font for countdown */
+    }
+
+    .map-container iframe {
+        height: 200px; /* Reduce height for mobile */
+    }
+}
+
+/* 8️⃣ Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

@@ -1,0 +1,117 @@
+/* 1️⃣ Card Components */
+
+/* a) Standard Card */
+.card {
+    border-radius: 4px; /* Soft rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 16px; /* Ample padding */
+    background: #fff; /* White background */
+    margin: 16px; /* Margin between cards */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.card:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+    transform: scale(1.02); /* Slight lift effect */
+}
+
+.card:focus {
+    border: 2px solid #007bff; /* Highlight border on focus */
+}
+
+/* b) Image Card */
+.image-card {
+    position: relative; /* Position for text overlay */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+}
+
+.image-card img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-card .text-overlay {
+    position: absolute; /* Position overlay */
+    bottom: 0; /* Align to bottom */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    padding: 10px; /* Text padding */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff; /* White text */
+    transition: background 0.3s ease; /* Transition for background */
+}
+
+.image-card:hover .text-overlay {
+    background: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+/* 2️⃣ Modals */
+
+/* a) Standard Modal */
+.modal {
+    position: fixed; /* Fixed positioning */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centering transform */
+    background: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside modal */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Shadow */
+    z-index: 1001; /* Above other content */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease-in-out; /* Fade-in transition */
+}
+
+.modal.open {
+    opacity: 1; /* Show modal */
+    transform: translate(-50%, -50%) scale(1.05); /* Scale up effect */
+}
+
+.modal .close-button {
+    position: absolute; /* Position close button */
+    top: 10px; /* Top position */
+    right: 10px; /* Right position */
+    background: transparent; /* Transparent background */
+    border: none; /* No border */
+    color: #f00; /* Red color */
+    font-size: 1.5rem; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.modal .close-button:hover {
+    color: #c00; /* Darker red on hover */
+}
+
+/* 3️⃣ Input Fields and Forms */
+
+/* a) Text Inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding */
+    width: 100%; /* Full width */
+    transition: border-color 0.3s ease; /* Transition for focus */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #007bff; /* Blue border on focus */
+    background-color: #f0f8ff; /* Slightly darker background */
+}
+
+input[type="text"].error,
+input[type="email"].error {
+    border-color: #e74c3c; /* Red border for error */
+    animation: shake 0.5s; /* Shake animation */
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}

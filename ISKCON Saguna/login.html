@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Saguna Namhatta (ISKCON), your spiritual home dedicated to spreading Lord Krishna's teachings and community service in West Bengal.">
+    <meta name="keywords" content="Saguna Namhatta (ISKCON), Lord Krishna, Bhagavad Gita, Spiritual Counseling, Devotional Services, Community Service, Kirtan">
+    <meta name="author" content="Saguna Namhatta (ISKCON) Team">
+    <meta property="og:title" content="Saguna Namhatta (ISKCON) - Welcome">
+    <meta property="og:description" content="Your spiritual home dedicated to spreading Lord Krishna's teachings and enriching lives through devotion.">
+    <meta property="og:image" content="images/hero_image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Saguna Namhatta (ISKCON)- Welcome">
+    <meta name="twitter:description" content="Your spiritual home dedicated to spreading Lord Krishna's teachings.">
+    <meta name="twitter:image" content="images/hero_image.jpg">
+    <meta name="robots" content="index, follow">
+    <title>Saguna Namhatta (ISKCON) - Welcome</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- External CSS Files  -->
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/Base.css">
+    <link rel="stylesheet" href="css/Layout.css">
+    <link rel="stylesheet" href="css/logonavbar.css"
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/Tailwind.css">
+    <link rel="stylesheet" href="css/typography.css">
+
+</head>
+
+<body>
+
+</style>
+ <!-- Header -->
+  <header>
+   <center><h1 class="bounce";>Welcome to Saguna Namhatta (ISKCON)</h1></center> 
+   </header>
+   <!--- Navigationa Pannel with Logo -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="logo-container">
+          <picture>
+            <source srcset="images/Logo.png" type="image/png"> 
+            <img src="images/Logo.png" 
+                 class="logo" 
+                 alt="ISKCON Raghunathpur Logo"
+                 width="120" 
+                 height="48"
+                 loading="lazy">
+          </picture>
+          <span class="logo-title" aria-hidden="true" style="color: #B8860B ;">SAGUNA NAMHATTA (ISKCON)</span>
+        </div>
+      
+        <button class="menu-toggle" 
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="main-menu">
+          <span class="sr-only">Menu</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      
+        <ul class="navbar-nav" id="main-menu" role="navigation">
+          <li class="nav-item" role="none">
+            <a href="index.html" 
+               class="nav-link" 
+               role="menuitem"
+               aria-current="page">
+               <i class="fas fa-home" aria-hidden="true"></i>
+               Home
+            </a>
+          </li>
+          
+          <li class="nav-item dropdown" role="none">
+            <button class="nav-link"
+                    role="menuitem"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    id="products-menu">
+               <i class="fas fa-om" aria-hidden="true"></i>
+               Activities
+            </button>
+            
+            <ul class="dropdown-menu" 
+                role="menu"
+                aria-labelledby="products-menu">
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="about.html"
+                   role="menuitem">
+                   <i class="fas fa-temple" aria-hidden="true"></i>
+                   About Temple
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="events.html"
+                   role="menuitem">
+                   <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                   Festivals
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="services.html"
+                   role="menuitem">
+                   <i class="fas fa-hands-praying" aria-hidden="true"></i>
+                   Seva Opportunities
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="donations.html"
+                   role="menuitem">
+                   <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                   Donate
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="live.html"
+                   role="menuitem">
+                   <i class="fas fa-video" aria-hidden="true"></i>
+                   Live Darshan
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- Some External Things of Navbar( Java)-->
+      <!-- Optimized Font Awesome -->
+      <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-<HASH>"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer">
+      
+      <!-- Enhanced JavaScript -->
+      <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.querySelector('.navbar');
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.navbar-nav');
+        const dropdowns = document.querySelectorAll('.dropdown');
+      
+        // Mobile menu with debounce
+        const toggleMenu = (forceClose) => {
+          const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+          const shouldExpand = forceClose ? false : !isExpanded;
+          
+          toggle.setAttribute('aria-expanded', shouldExpand);
+          menu.classList.toggle('active', shouldExpand);
+          toggle.classList.toggle('active', shouldExpand);
+          navbar.classList.toggle('menu-open', shouldExpand);
+        };
+      
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleMenu();
+        });
+      
+        // Enhanced dropdown handling
+        const handleDropdown = (dropdown, open) => {
+          const trigger = dropdown.querySelector('[aria-haspopup]');
+          dropdown.classList.toggle('active', open);
+          trigger.setAttribute('aria-expanded', open);
+        };
+      
+        dropdowns.forEach(dropdown => {
+          const trigger = dropdown.querySelector('[aria-haspopup]');
+          
+          // Mobile touch handling
+          trigger.addEventListener('click', (e) => {
+            if (window.innerWidth < 1025) {
+              e.preventDefault();
+              handleDropdown(dropdown, !dropdown.classList.contains('active'));
+            }
+          });
+      
+          // Desktop hover with timeout
+          let hoverTimeout;
+          dropdown.addEventListener('mouseenter', () => {
+            if (window.innerWidth >= 1025) {
+              clearTimeout(hoverTimeout);
+              hoverTimeout = setTimeout(() => handleDropdown(dropdown, true), 150);
+            }
+          });
+      
+          dropdown.addEventListener('mouseleave', () => {
+            if (window.innerWidth >= 1025) {
+              clearTimeout(hoverTimeout);
+              hoverTimeout = setTimeout(() => handleDropdown(dropdown, false), 300);
+            }
+          });
+        });
+      
+        // Responsive close handling
+        const closeAll = () => {
+          toggleMenu(false);
+          dropdowns.forEach(d => handleDropdown(d, false));
+        };
+      
+        // Click outside handler
+        document.addEventListener('click', (e) => !navbar.contains(e.target) && closeAll());
+        document.addEventListener('keydown', (e) => e.key === 'Escape' && closeAll());
+        
+        // Window resize handler
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(closeAll, 250);
+        });
+      });
+      </script>
+<div class="login-container" id="loginContainer">
+  <div class="login-header">
+      <h2>Admin Portal</h2>
+      <p>Enter your credentials to continue</p>
+  </div>
+  
+  <form id="loginForm">
+      <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter admin username" autocomplete="username" required>
+          <span class="error-message" id="usernameError"></span>
+      </div>
+      
+      <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password" required>
+          <span class="error-message" id="passwordError"></span>
+      </div>
+      
+      <button type="submit" class="login-btn" id="loginBtn">
+          <span id="btnText">Login</span>
+      </button>
+  </form>
+</div>
+
+
+<script>
+    (function() {
+        // DOM Elements
+        const donationForm = document.getElementById('donationForm');
+        const donorNameInput = document.getElementById('donorName');
+        const amountInput = document.getElementById('amount');
+        const dateInput = document.getElementById('date');
+        const purposeInput = document.getElementById('purpose');
+        const saveBtn = document.getElementById('saveBtn');
+        const btnText = document.getElementById('btnText');
+        const successMessage = document.getElementById('successMessage');
+        const donationsList = document.getElementById('donationsList');
+    
+        // Configuration
+        const config = {
+            saveDelay: 800, // Simulated save delay
+            localStorageKey: 'donationRecords',
+            minAmount: 1,
+            maxAmount: 1000000
+        };
+    
+        // Initialize
+        function init() {
+            loadDonations();
+            initEventListeners();
+        }
+    
+        // Event Listeners
+        function initEventListeners() {
+            if (donationForm) {
+                donationForm.addEventListener('submit', handleSubmit);
+            }
+            if (saveBtn) {
+                saveBtn.addEventListener('click', handleSubmit);
+            }
+        }
+    
+        // Main Functions
+        function handleSubmit(e) {
+            e.preventDefault();
+            resetUIState();
+            
+            const donation = getDonationData();
+            if (!validateDonation(donation)) return;
+            
+            saveDonation(donation);
+        }
+    
+        function getDonationData() {
+            return {
+                donorName: donorNameInput.value.trim(),
+                amount: parseFloat(amountInput.value),
+                date: dateInput.value,
+                purpose: purposeInput.value.trim(),
+                timestamp: new Date().toISOString()
+            };
+        }
+    
+        function validateDonation(donation) {
+            let isValid = true;
+            
+            if (!donation.donorName) {
+                showError(donorNameInput, 'Donor name is required');
+                isValid = false;
+            }
+            
+            if (!donation.amount || isNaN(donation.amount)) {
+                showError(amountInput, 'Valid amount is required');
+                isValid = false;
+            } else if (donation.amount < config.minAmount) {
+                showError(amountInput, `Amount must be at least ${config.minAmount}`);
+                isValid = false;
+            } else if (donation.amount > config.maxAmount) {
+                showError(amountInput, `Amount cannot exceed ${config.maxAmount}`);
+                isValid = false;
+            }
+            
+            if (!donation.date) {
+                showError(dateInput, 'Date is required');
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+    
+        function saveDonation(donation) {
+            showLoadingState();
+            
+            // Simulate save delay
+            setTimeout(() => {
+                // Get existing donations from localStorage
+                const existingDonations = JSON.parse(localStorage.getItem(config.localStorageKey)) || [];
+                
+                // Add new donation
+                existingDonations.push(donation);
+                
+                // Save back to localStorage
+                localStorage.setItem(config.localStorageKey, JSON.stringify(existingDonations));
+                
+                handleSuccess(donation);
+                loadDonations(); // Refresh the list
+            }, config.saveDelay);
+        }
+    
+        function loadDonations() {
+            if (!donationsList) return;
+            
+            const donations = JSON.parse(localStorage.getItem(config.localStorageKey)) || [];
+            
+            if (donations.length === 0) {
+                donationsList.innerHTML = '<p>No donations recorded yet.</p>';
+                return;
+            }
+            
+            donationsList.innerHTML = donations.map((donation, index) => `
+                <div class="donation-record">
+                    <h4>Donation #${index + 1}</h4>
+                    <p><strong>Donor:</strong> ${donation.donorName}</p>
+                    <p><strong>Amount:</strong> $${donation.amount.toFixed(2)}</p>
+                    <p><strong>Date:</strong> ${new Date(donation.date).toLocaleDateString()}</p>
+                    <p><strong>Purpose:</strong> ${donation.purpose || 'General'}</p>
+                    <p><small>Recorded: ${new Date(donation.timestamp).toLocaleString()}</small></p>
+                </div>
+            `).join('');
+        }
+    
+        // UI Helpers
+        function resetUIState() {
+            clearErrors();
+            if (successMessage) successMessage.classList.remove('show');
+        }
+    
+        function clearErrors() {
+            const errorElements = document.querySelectorAll('.error-message');
+            errorElements.forEach(el => el.remove());
+            
+            const inputElements = document.querySelectorAll('.error');
+            inputElements.forEach(el => el.classList.remove('error'));
+        }
+    
+        function showError(inputElement, message) {
+            // Remove any existing error message
+            const existingError = inputElement.nextElementSibling;
+            if (existingError && existingError.classList.contains('error-message')) {
+                existingError.remove();
+            }
+            
+            inputElement.classList.add('error');
+            const errorElement = document.createElement('div');
+            errorElement.className = 'error-message';
+            errorElement.textContent = message;
+            inputElement.parentNode.insertBefore(errorElement, inputElement.nextSibling);
+        }
+    
+        function showLoadingState() {
+            if (!saveBtn) return;
+            
+            saveBtn.disabled = true;
+            btnText.innerHTML = `
+                <span class="loading-spinner" aria-hidden="true"></span>
+                <span class="sr-only">Saving...</span>
+                Saving...
+            `;
+        }
+    
+        function handleSuccess(donation) {
+            if (saveBtn) {
+                saveBtn.disabled = false;
+                saveBtn.classList.add('success');
+                btnText.innerHTML = `
+                    <svg class="success-checkmark" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                    </svg>
+                    Saved Successfully!
+                `;
+                
+                // Reset form
+                if (donationForm) donationForm.reset();
+                
+                // Show success message
+                if (successMessage) {
+                    successMessage.textContent = `Successfully saved donation of $${donation.amount.toFixed(2)} from ${donation.donorName}`;
+                    successMessage.classList.add('show');
+                }
+                
+                // Reset button after delay
+                setTimeout(() => {
+                    if (saveBtn) {
+                        saveBtn.classList.remove('success');
+                        btnText.textContent = 'Save Donation';
+                    }
+                }, 3000);
+            }
+        }
+    
+        // Initialize
+        init();
+    })();
+    </script>
+
+
+  <!-- Footer of page -->
+<footer class="iskcon-footer">
+    <div class="footer-container">
+        <!-- Grid Layout -->
+        <div class="footer-grid">
+            <!-- Spiritual Resources -->
+            <div class="footer-section">
+              <h4 class="slide-in-left text-gold">Spiritual Resources</h4>
+                <div class="slide-in-left">
+                  <ul class="footer-link"
+                    <li><a href="https://vedabase.io/en/library/bg/" class="footer-link">Bhagavad Gita</a></li>
+                    <li><a href="https://lakshminarayanlenasia.com/articles/ShriKrishnaPrayers.pdf" class="footer-link">Daily Prayers</a></li>
+                    <li><a href="https://iskcondesiretree.com/profiles/blogs/hare-krishna-calendar-2025" class="footer-link">Festival Calendar</a></li>
+                </ul>
+                </div>
+            </div>
+
+            <!-- Temple Info -->
+            <div class="footer-section">
+                <h4 class="slide-in-left">Temple Services</h4>
+                <div class="slide-in-left">
+                    <ul class="footer-link"
+                    <li><a href="donations.html" class="footer-link">Donate</a></li>
+                    <li><a href="contact.html" class="footer-link">Volunteer</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact </a></li>
+
+                </ul>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="slide-in-left">
+                <h4 class="slide-in-left">Connect With Us</h4>
+                <div class="slide-in-left">
+                  <div class=" footer-link">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+         </div>
+         
+
+        <!-- Copyright & Sacred Symbol -->
+        <div class="bounce">
+          <img src="images/Symbol.png" alt="Saguna Namhatta (ISKCON) symbol" class="symbol">
+          <style>
+          img {
+            border-radius: 15px; /* Adjust for more/less rounding */
+            overflow: hidden; /* Ensures no sharp edges */
+            display: block; /* Removes unwanted spacing */
+        }
+        </style>
+          <span style="font-size: 12px; color: #FFFDD0;">&copy; 2025 Saguna Hare Krishna Namhatta (ISKCON). All Glories to Srila Prabhupada.</span>
+
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTop" title="Go to top">&#8593;</button>
+
+    <!-- JavaScript Files -->
+    <script src="js/animations.js"></script>
+    <script src="js/for-validation.js"></script>
+    <script src="js/logo.js"></script>
+    <script src="js/navbar.js"></script>
+
+    <script>
+        const backToTop = document.getElementById("backToTop");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <style>
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        #backToTop:hover {
+            background-color: #555;
+        }
+        .cta-button:hover {
+            background-color: #0066cc;
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .indicator {
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background-color: #bbb;
+            cursor: pointer;
+        }
+        .indicator.active {
+            background-color: #0066cc;
+        }
+    </style>
+
+</body>
+
+</html>

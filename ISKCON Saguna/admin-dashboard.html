@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Saguna Namhatta (ISKCON), your spiritual home dedicated to spreading Lord Krishna's teachings and community service in West Bengal.">
+    <meta name="keywords" content="Saguna Namhatta (ISKCON), Lord Krishna, Bhagavad Gita, Spiritual Counseling, Devotional Services, Community Service, Kirtan">
+    <meta name="author" content="Saguna Namhatta (ISKCON) Team">
+    <meta property="og:title" content="Saguna Namhatta (ISKCON) - Welcome">
+    <meta property="og:description" content="Your spiritual home dedicated to spreading Lord Krishna's teachings and enriching lives through devotion.">
+    <meta property="og:image" content="images/hero_image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Saguna Namhatta (ISKCON) - Welcome">
+    <meta name="twitter:description" content="Your spiritual home dedicated to spreading Lord Krishna's teachings.">
+    <meta name="twitter:image" content="images/hero_image.jpg">
+    <meta name="robots" content="index, follow">
+    <title>Saguna Namhatta (ISKCON) - Welcome</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- External CSS Files  -->
+    <link rel="stylesheet" href="css/admin-dashboard.css"
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/Base.css">
+    <link rel="stylesheet" href="css/Layout.css">
+    <link rel="stylesheet" href="css/logonavbar.css"
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/Tailwind.css">
+    <link rel="stylesheet" href="css/typography.css">
+</head>
+
+<body>
+<!-- Header -->
+  <header>
+   <center><h1 class="bounce";>Welcome to Saguna Namhatta (ISKCON)</h1></center> 
+   </header>
+   <!--- Navigationa Pannel with Logo -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="logo-container">
+          <picture>
+            <source srcset="images/Logo.png" type="image/png"> 
+            <img src="images/Logo.png" 
+                 class="logo" 
+                 alt="ISKCON Raghunathpur Logo"
+                 width="120" 
+                 height="48"
+                 loading="lazy">
+          </picture>
+          <span class="logo-title" aria-hidden="true" style="color: #B8860B ;">SAGUNA NAMHATTA (ISKCON)</span>
+        </div>
+      
+        <button class="menu-toggle" 
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="main-menu">
+          <span class="sr-only">Menu</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      
+        <ul class="navbar-nav" id="main-menu" role="navigation">
+          <li class="nav-item" role="none">
+            <a href="index.html" 
+               class="nav-link" 
+               role="menuitem"
+               aria-current="page">
+               <i class="fas fa-home" aria-hidden="true"></i>
+               Home
+            </a>
+          </li>
+          
+          <li class="nav-item dropdown" role="none">
+            <button class="nav-link"
+                    role="menuitem"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    id="products-menu">
+               <i class="fas fa-om" aria-hidden="true"></i>
+               Activities
+            </button>
+            
+            <ul class="dropdown-menu" 
+                role="menu"
+                aria-labelledby="products-menu">
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="about.html"
+                   role="menuitem">
+                   <i class="fas fa-temple" aria-hidden="true"></i>
+                   About Temple
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="events.html"
+                   role="menuitem">
+                   <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                   Festivals
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="services.html"
+                   role="menuitem">
+                   <i class="fas fa-hands-praying" aria-hidden="true"></i>
+                   Seva Opportunities
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="donations.html"
+                   role="menuitem">
+                   <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                   Donate
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="live.html"
+                   role="menuitem">
+                   <i class="fas fa-video" aria-hidden="true"></i>
+                   Live Darshan
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- Some External Things of Navbar( Java)-->
+      <!-- Optimized Font Awesome -->
+      <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-<HASH>"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer">
+      
+      <!-- Enhanced JavaScript -->
+      <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.querySelector('.navbar');
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.navbar-nav');
+        const dropdowns = document.querySelectorAll('.dropdown');
+      
+        // Mobile menu with debounce
+        const toggleMenu = (forceClose) => {
+          const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+          const shouldExpand = forceClose ? false : !isExpanded;
+          
+          toggle.setAttribute('aria-expanded', shouldExpand);
+          menu.classList.toggle('active', shouldExpand);
+          toggle.classList.toggle('active', shouldExpand);
+          navbar.classList.toggle('menu-open', shouldExpand);
+        };
+      
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleMenu();
+        });
+      
+        // Enhanced dropdown handling
+        const handleDropdown = (dropdown, open) => {
+          const trigger = dropdown.querySelector('[aria-haspopup]');
+          dropdown.classList.toggle('active', open);
+          trigger.setAttribute('aria-expanded', open);
+        };
+      
+        dropdowns.forEach(dropdown => {
+          const trigger = dropdown.querySelector('[aria-haspopup]');
+          
+          // Mobile touch handling
+          trigger.addEventListener('click', (e) => {
+            if (window.innerWidth < 1025) {
+              e.preventDefault();
+              handleDropdown(dropdown, !dropdown.classList.contains('active'));
+            }
+          });
+      
+          // Desktop hover with timeout
+          let hoverTimeout;
+          dropdown.addEventListener('mouseenter', () => {
+            if (window.innerWidth >= 1025) {
+              clearTimeout(hoverTimeout);
+              hoverTimeout = setTimeout(() => handleDropdown(dropdown, true), 150);
+            }
+          });
+      
+          dropdown.addEventListener('mouseleave', () => {
+            if (window.innerWidth >= 1025) {
+              clearTimeout(hoverTimeout);
+              hoverTimeout = setTimeout(() => handleDropdown(dropdown, false), 300);
+            }
+          });
+        });
+      
+        // Responsive close handling
+        const closeAll = () => {
+          toggleMenu(false);
+          dropdowns.forEach(d => handleDropdown(d, false));
+        };
+      
+        // Click outside handler
+        document.addEventListener('click', (e) => !navbar.contains(e.target) && closeAll());
+        document.addEventListener('keydown', (e) => e.key === 'Escape' && closeAll());
+        
+        // Window resize handler
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(closeAll, 250);
+        });
+      });
+      </script>
+
+<section id="dashboard-section" aria-labelledby="dashboard-heading">
+    <div class="section-container">
+      <header class="dashboard-header">
+        <h2 id="dashboard-heading" class="dashboard-title">Welcome, <span class="admin-name">Admin</span></h2>
+        <p class="intro-text">Manage events, donations, and live streams from your centralized dashboard.</p>
+      </header>
+  
+      <div class="admin-options-grid">
+        <!-- Event Management Card -->
+        <article class="option-card" aria-labelledby="event-management-heading">
+          <div class="card-icon-container">
+            <i class="fas fa-calendar-alt option-icon" aria-hidden="true"></i>
+          </div>
+          <div class="card-content">
+            <h3 id="event-management-heading">Event Management</h3>
+            <p class="card-description">Plan, schedule, and manage upcoming events and registrations.</p>
+            <a href="manage-events.html" class="btn option-btn" aria-label="Manage events">
+              Manage Events <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+  
+        <!-- Donation History Card -->
+        <article class="option-card" aria-labelledby="donation-history-heading">
+          <div class="card-icon-container">
+            <i class="fas fa-hand-holding-heart option-icon" aria-hidden="true"></i>
+          </div>
+          <div class="card-content">
+            <h3 id="donation-history-heading">Donation History</h3>
+            <p class="card-description">Track donations, generate reports, and manage donor records.</p>
+            <a href="donation-history.html" class="btn option-btn" aria-label="View donation history">
+              View Donations <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+  
+        <!-- Live Streaming Card -->
+        <article class="option-card" aria-labelledby="live-streaming-heading">
+          <div class="card-icon-container">
+            <i class="fas fa-video option-icon" aria-hidden="true"></i>
+          </div>
+          <div class="card-content">
+            <h3 id="live-streaming-heading">Live Streaming</h3>
+            <p class="card-description">Control live streams, manage broadcasts, and monitor viewers.</p>
+            <a href="live-stream.html" class="btn option-btn" aria-label="Manage live streams">
+              Manage Stream <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    /* Dashboard Variables */
+    :root {
+      --dashboard-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      --card-shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+      --primary-accent: #4361ee;
+      --primary-accent-light: rgba(67, 97, 238, 0.1);
+      --secondary-accent: #ef476f;
+      --tertiary-accent: #06d6a0;
+      --text-dark: #1e293b;
+      --text-medium: #64748b;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  
+    /* Dashboard Layout */
+    #dashboard-section {
+      background-color: var(--dashboard-bg);
+      padding: 2rem 1rem;
+    }
+  
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+  
+    .dashboard-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+  
+    .dashboard-title {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+  
+    .admin-name {
+      color: var(--primary-accent);
+    }
+  
+    .intro-text {
+      color: var(--text-medium);
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  
+    /* Admin Options Grid */
+    .admin-options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+  
+    /* Option Cards */
+    .option-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.75rem;
+      box-shadow: var(--card-shadow);
+      transition: var(--transition);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  
+    .option-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--card-shadow-hover);
+    }
+  
+    .card-icon-container {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      background-color: var(--primary-accent-light);
+    }
+  
+    .option-card:nth-child(1) .card-icon-container {
+      color: var(--primary-accent);
+    }
+  
+    .option-card:nth-child(2) .card-icon-container {
+      color: var(--secondary-accent);
+      background-color: rgba(239, 71, 111, 0.1);
+    }
+  
+    .option-card:nth-child(3) .card-icon-container {
+      color: var(--tertiary-accent);
+      background-color: rgba(6, 214, 160, 0.1);
+    }
+  
+    .option-icon {
+      font-size: 1.5rem;
+    }
+  
+    .card-content {
+      flex: 1;
+    }
+  
+    .option-card h3 {
+      font-size: 1.25rem;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+    }
+  
+    .card-description {
+      color: var(--text-medium);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+  
+    /* Buttons */
+    .option-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.25rem;
+      background-color: var(--primary-accent);
+      color: white;
+      border-radius: 8px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: var(--transition);
+      width: fit-content;
+    }
+  
+    .option-card:nth-child(1) .option-btn {
+      background-color: var(--primary-accent);
+    }
+  
+    .option-card:nth-child(2) .option-btn {
+      background-color: var(--secondary-accent);
+    }
+  
+    .option-card:nth-child(3) .option-btn {
+      background-color: var(--tertiary-accent);
+    }
+  
+    .option-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  
+    .option-btn span {
+      margin-left: 0.5rem;
+      transition: transform 0.2s ease;
+    }
+  
+    .option-btn:hover span {
+      transform: translateX(3px);
+    }
+  
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .admin-options-grid {
+        grid-template-columns: 1fr;
+      }
+  
+      .dashboard-header {
+        margin-bottom: 2rem;
+      }
+    }
+  
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      .option-card,
+      .option-btn {
+        transition: none;
+      }
+    }
+  </style>
+    
+  <!-- Footer of page -->
+<footer class="iskcon-footer">
+    <div class="footer-container">
+        <!-- Grid Layout -->
+        <div class="footer-grid">
+            <!-- Spiritual Resources -->
+            <div class="footer-section">
+              <h4 class="slide-in-left text-gold">Spiritual Resources</h4>
+                <div class="slide-in-left">
+                  <ul class="footer-link"
+                    <li><a href="https://vedabase.io/en/library/bg/" class="footer-link">Bhagavad Gita</a></li>
+                    <li><a href="https://lakshminarayanlenasia.com/articles/ShriKrishnaPrayers.pdf" class="footer-link">Daily Prayers</a></li>
+                    <li><a href="https://iskcondesiretree.com/profiles/blogs/hare-krishna-calendar-2025" class="footer-link">Festival Calendar</a></li>
+                </ul>
+                </div>
+            </div>
+
+            <!-- Temple Info -->
+            <div class="footer-section">
+                <h4 class="slide-in-left">Temple Services</h4>
+                <div class="slide-in-left">
+                    <ul class="footer-link"
+                    <li><a href="donations.html" class="footer-link">Donate</a></li>
+                    <li><a href="contact.html" class="footer-link">Volunteer</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact </a></li>
+
+                </ul>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="slide-in-left">
+                <h4 class="slide-in-left">Connect With Us</h4>
+                <div class="slide-in-left">
+                  <div class=" footer-link">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+         </div>
+         
+
+        <!-- Copyright & Sacred Symbol -->
+        <div class="bounce">
+          <img src="images/Symbol.png" alt="Saguna Namhatta (ISKCON) symbol" class="symbol">
+          <style>
+          img {
+            border-radius: 15px; /* Adjust for more/less rounding */
+            overflow: hidden; /* Ensures no sharp edges */
+            display: block; /* Removes unwanted spacing */
+        }
+        </style>
+          <span style="font-size: 12px; color: #FFFDD0;">&copy; 2025 Saguna Hare Krishna Namhatta (ISKCON). All Glories to Srila Prabhupada.</span>
+
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTop" title="Go to top">&#8593;</button>
+
+    <!-- JavaScript Files -->
+    <script src="js/animations.js"></script>
+    <script src="js/for-validation.js"></script>
+    <script src="js/logo.js"></script>
+    <script src="js/navbar.js"></script>
+
+    <script>
+        const backToTop = document.getElementById("backToTop");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <style>
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        #backToTop:hover {
+            background-color: #555;
+        }
+        .cta-button:hover {
+            background-color: #0066cc;
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .indicator {
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background-color: #bbb;
+            cursor: pointer;
+        }
+        .indicator.active {
+            background-color: #0066cc;
+        }
+    </style>
+
+</body>
+
+</html>

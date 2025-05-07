@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Saguna Namhatta (ISKCON), your spiritual home dedicated to spreading Lord Krishna's teachings and community service in West Bengal.">
+    <meta name="keywords" content="Saguna Namhatta (ISKCON), Lord Krishna, Bhagavad Gita, Spiritual Counseling, Devotional Services, Community Service, Kirtan">
+    <meta name="author" content="Saguna Namhatta (ISKCON) Team">
+    <meta property="og:title" content="Saguna Namhatta (ISKCON) - Welcome">
+    <meta property="og:description" content="Your spiritual home dedicated to spreading Lord Krishna's teachings and enriching lives through devotion.">
+    <meta property="og:image" content="images/hero_image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Saguna Namhatta (ISKCON) - Welcome">
+    <meta name="twitter:description" content="Your spiritual home dedicated to spreading Lord Krishna's teachings.">
+    <meta name="twitter:image" content="images/hero_image.jpg">
+    <meta name="robots" content="index, follow">
+    <title>Saguna Namhatta (ISKCON) - Welcome</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- External CSS Files  -->
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/Base.css">
+    <link rel="stylesheet" href="css/Layout.css">
+    <link rel="stylesheet" href="css/logonavbar.css"
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/Tailwind.css">
+    <link rel="stylesheet" href="css/typography.css">
+</head>
+
+<body>
+<!-- About Preview Section -->
+<section class="about-preview">
+  <div class="sacred-hero">
+    <img 
+      src="images\Services.png"
+      alt="Sri Sri Jagannath Baladev Subhadra" 
+      loading="lazy" 
+      class="deity-image"
+    >
+    <div class="hero-overlay"></div>
+    
+    <article class="essence-wrapper">
+      <div class="scrollable-content">
+        <h1 class="temple-name">
+          <span class="iskcon-logo">ISKCON</span>
+          Raghunathpur Temple
+        </h1>
+
+        <div class="sanctum-message">
+          <p class="core-mission">
+            Our services are offered with the spirit of pure devotion, following<br>
+      <strong>Śrīla Prabhupāda's</strong> mission to serve humanity
+    </p>
+          <div class="vedic-pillar">
+            <div class="gita-wisdom">
+                <span class="verse-ref">BG 12.13-14</span>
+                <q class="sacred-text">"One who is not envious but is a kind friend to all living entities... is very dear to Me"</q>
+            </div>
+          </div>
+        </div>
+
+        <div class="dharma-practices">
+          <div class="practice-badge">
+            <div class="om-symbol">🕉️</div>
+            Daily Arati
+          </div>
+          <div class="practice-badge">
+            <div class="mala-beads">📿</div>
+            Sankirtan
+          </div>
+          <div class="practice-badge">
+            <div class="prasadam">🍛</div>
+            Annadanam
+          </div>
+        </div>
+
+        <a href="services.html" class="sadhana-cta" aria-label="View our complete service schedule">
+            Join Daily Services →
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+:root {
+  --saffron: #FF8F00;
+  --tulasi-green: #006B3D;
+  --vedic-gold: #D4AF37;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --overlay-color: rgba(0, 0, 0, 0.4); /* Lighter overlay for better deity visibility */
+  --transition-speed: 0.3s;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-preview {
+  width: 90%;
+  max-width: 1200px;
+  background: var(--background-color);
+  padding: 2rem;
+  margin: 2rem auto;
+  margin-top: 8rem;
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.sacred-hero {
+  position: relative;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.deity-image {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-color);
+}
+
+.essence-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  max-width: 800px;
+  width: 90%;
+  height: 80%; /* Adjusted height for scrollable content */
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5); /* Slightly transparent background for text */
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.scrollable-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.temple-name {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  color: var(--vedic-gold);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+
+.iskcon-logo {
+  display: block;
+  font-size: 1.8rem;
+  color: var(--saffron);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.core-mission {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.vedic-pillar {
+  border-left: 3px solid var(--tulasi-green);
+  padding-left: 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 400px;
+}
+
+.divine-command {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--vedic-gold);
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.sanskrit {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.dharma-practices {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.practice-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  transition: transform var(--transition-speed) ease;
+  flex: 1;
+  max-width: 150px;
+}
+
+.practice-badge:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.om-symbol, .mala-beads, .prasadam {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sadhana-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background: var(--saffron);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all var(--transition-speed) ease;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.sadhana-cta:hover {
+  background: transparent;
+  border-color: var(--saffron);
+  color: var(--saffron);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .about-preview {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .deity-image {
+    min-height: 400px;
+    object-position: center;
+  }
+
+  .essence-wrapper {
+    padding: 1.5rem;
+    width: 95%;
+    height: 70%; /* Adjusted height for mobile */
+  }
+
+  .temple-name {
+    font-size: 2rem;
+  }
+
+  .iskcon-logo {
+    font-size: 1.5rem;
+  }
+
+  .core-mission {
+    font-size: 1rem;
+  }
+
+  .divine-command {
+    font-size: 1.1rem;
+  }
+
+  .dharma-practices {
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .practice-badge {
+    flex: 1 1 45%;
+    max-width: none;
+    padding: 0.75rem;
+  }
+
+  .om-symbol, .mala-beads, .prasadam {
+    font-size: 1.5rem;
+  }
+
+  .sadhana-cta {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    margin-top: 1rem; /* Added margin to ensure visibility */
+  }
+}
+
+@media (max-width: 480px) {
+  .temple-name {
+    font-size: 1.8rem;
+  }
+
+  .iskcon-logo {
+    font-size: 1.2rem;
+  }
+
+  .core-mission {
+    font-size: 0.9rem;
+  }
+
+  .divine-command {
+    font-size: 1rem;
+  }
+
+  .dharma-practices {
+    gap: 0.75rem;
+  }
+
+  .practice-badge {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+
+  .sadhana-cta {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+</style>
+ <!-- Header -->
+  <header>
+   <center><h1 class="bounce";>Welcome to Saguna Namhatta (ISKCON)</h1></center> 
+   </header>
+   <!--- Navigationa Pannel with Logo -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="logo-container">
+          <picture>
+            <source srcset="images/Logo.png" type="image/png"> 
+            <img src="images/Logo.png" 
+                 class="logo" 
+                 alt="Saguna Namhatta (ISKCON)"
+                 width="120" 
+                 height="48"
+                 loading="lazy">
+          </picture>
+          <span class="logo-title" aria-hidden="true" style="color: #B8860B ;">SAGUNA NAMHATTA (ISKCON)</span>
+        </div>
+      
+        <button class="menu-toggle" 
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="main-menu">
+          <span class="sr-only">Menu</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      
+        <ul class="navbar-nav" id="main-menu" role="navigation">
+          <li class="nav-item" role="none">
+            <a href="index.html" 
+               class="nav-link" 
+               role="menuitem"
+               aria-current="page">
+               <i class="fas fa-home" aria-hidden="true"></i>
+               Home
+            </a>
+          </li>
+          
+          <li class="nav-item dropdown" role="none">
+            <button class="nav-link"
+                    role="menuitem"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    id="products-menu">
+               <i class="fas fa-om" aria-hidden="true"></i>
+               Activities
+            </button>
+            
+            <ul class="dropdown-menu" 
+                role="menu"
+                aria-labelledby="products-menu">
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="about.html"
+                   role="menuitem">
+                   <i class="fas fa-temple" aria-hidden="true"></i>
+                   About Temple
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="events.html"
+                   role="menuitem">
+                   <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                   Festivals
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="services.html"
+                   role="menuitem">
+                   <i class="fas fa-hands-praying" aria-hidden="true"></i>
+                   Seva Opportunities
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="donations.html"
+                   role="menuitem">
+                   <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                   Donate
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="live.html"
+                   role="menuitem">
+                   <i class="fas fa-video" aria-hidden="true"></i>
+                   Live Darshan
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- Some External Things of Navbar( Java)-->
+      <!-- Optimized Font Awesome -->
+      <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-<HASH>"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer">
+      
+      <!-- Enhanced JavaScript -->
+      <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.querySelector('.navbar');
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.navbar-nav');
+        const dropdowns = document.querySelectorAll('.dropdown');
+      
+        // Mobile menu with debounce
+        const toggleMenu = (forceClose) => {
+          const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+          const shouldExpand = forceClose ? false : !isExpanded;
+          
+          toggle.setAttribute('aria-expanded', shouldExpand);
+          menu.classList.toggle('active', shouldExpand);
+          toggle.classList.toggle('active', shouldExpand);
+          navbar.classList.toggle('menu-open', shouldExpand);
+        };
+      
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleMenu();
+        });
+      
+        // Enhanced dropdown handling
+        const handleDropdown = (dropdown, open) => {
+          const trigger = dropdown.querySelector('[aria-haspopup]');
+          dropdown.classList.toggle('active', open);
+          trigger.setAttribute('aria-expanded', open);
+        };
+      
+        dropdowns.forEach(dropdown => {
+          const trigger = dropdown.querySelector('[aria-haspopup]');
+          
+          // Mobile touch handling
+          trigger.addEventListener('click', (e) => {
+            if (window.innerWidth < 1025) {
+              e.preventDefault();
+              handleDropdown(dropdown, !dropdown.classList.contains('active'));
+            }
+          });
+      
+          // Desktop hover with timeout
+          let hoverTimeout;
+          dropdown.addEventListener('mouseenter', () => {
+            if (window.innerWidth >= 1025) {
+              clearTimeout(hoverTimeout);
+              hoverTimeout = setTimeout(() => handleDropdown(dropdown, true), 150);
+            }
+          });
+      
+          dropdown.addEventListener('mouseleave', () => {
+            if (window.innerWidth >= 1025) {
+              clearTimeout(hoverTimeout);
+              hoverTimeout = setTimeout(() => handleDropdown(dropdown, false), 300);
+            }
+          });
+        });
+      
+        // Responsive close handling
+        const closeAll = () => {
+          toggleMenu(false);
+          dropdowns.forEach(d => handleDropdown(d, false));
+        };
+      
+        // Click outside handler
+        document.addEventListener('click', (e) => !navbar.contains(e.target) && closeAll());
+        document.addEventListener('keydown', (e) => e.key === 'Escape' && closeAll());
+        
+        // Window resize handler
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(closeAll, 250);
+        });
+      });
+      </script>
+<main class="essay-container">
+    <section id="services">
+        <div class="section-container">
+            <h2>Our Services</h2>
+            <p>Saguna Namhatta (ISKCON) offers a variety of services designed to deepen your spiritual practice and community engagement. Join us in our efforts to uplift and enrich lives!</p>
+
+            <!-- Service Cards -->
+            <div class="services-grid">
+                <!-- Service 1: Spiritual Guidance -->
+                <article class="service">
+                    <i class="fas fa-book icon"></i>
+                    <h3>Spiritual Guidance</h3>
+                    <p>Our experienced devotees offer personalized spiritual counseling to guide you through your spiritual journey, addressing your questions and challenges.</p>
+                    <a href="404.html" class="btn">Learn More</a>
+                </article>
+
+                <!-- Service 2: Food Distribution -->
+                <article class="service">
+                    <i class="fas fa-utensils icon"></i>
+                    <h3>Food Distribution</h3>
+                    <p>Join us in distributing prasadam (blessed food) to those in need. Our food distribution programs aim to alleviate hunger and spread compassion.</p>
+                    <a href="404.html" class="btn">Join Us</a>
+                </article>
+
+                <!-- Service 3: Bhagavad Gita Classes -->
+                <article class="service">
+                    <i class="fas fa-book-open icon"></i>
+                    <h3>Bhagavad Gita Classes</h3>
+                    <p>Engage in weekly Bhagavad Gita classes, where you can delve into the profound teachings of Lord Krishna and enhance your spiritual knowledge.</p>
+                    <a href="live.html" class="btn">Join a Class</a>
+                </article>
+
+                <!-- Service 4: Community Outreach -->
+                <article class="service">
+                    <i class="fas fa-hands-helping icon"></i>
+                    <h3>Community Outreach</h3>
+                    <p>Participate in our outreach activities to share the teachings of Lord Krishna and assist in the spiritual growth of the community.</p>
+                    <a href="404.html" class="btn">Get Involved</a>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+  <!-- Footer of page -->
+<footer class="iskcon-footer">
+    <div class="footer-container">
+        <!-- Grid Layout -->
+        <div class="footer-grid">
+            <!-- Spiritual Resources -->
+            <div class="footer-section">
+              <h4 class="slide-in-left text-gold">Spiritual Resources</h4>
+                <div class="slide-in-left">
+                  <ul class="footer-link"
+                    <li><a href="https://vedabase.io/en/library/bg/" class="footer-link">Bhagavad Gita</a></li>
+                    <li><a href="https://lakshminarayanlenasia.com/articles/ShriKrishnaPrayers.pdf" class="footer-link">Daily Prayers</a></li>
+                    <li><a href="https://iskcondesiretree.com/profiles/blogs/hare-krishna-calendar-2025" class="footer-link">Festival Calendar</a></li>
+                </ul>
+                </div>
+            </div>
+
+            <!-- Temple Info -->
+            <div class="footer-section">
+                <h4 class="slide-in-left">Temple Services</h4>
+                <div class="slide-in-left">
+                    <ul class="footer-link"
+                    <li><a href="donations.html" class="footer-link">Donate</a></li>
+                    <li><a href="contact.html" class="footer-link">Volunteer</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact </a></li>
+
+                </ul>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="slide-in-left">
+                <h4 class="slide-in-left">Connect With Us</h4>
+                <div class="slide-in-left">
+                  <div class=" footer-link">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+         </div>
+         
+
+        <!-- Copyright & Sacred Symbol -->
+        <div class="bounce">
+          <img src="images/Symbol.png" alt="Saguna Namhatta (ISKCON) symbol" class="symbol">
+          <style>
+          img {
+            border-radius: 15px; /* Adjust for more/less rounding */
+            overflow: hidden; /* Ensures no sharp edges */
+            display: block; /* Removes unwanted spacing */
+        }
+        </style> 
+          <span style="font-size: 12px; color: #FFFDD0;">&copy; 2025 Saguna Hare Krishna Namhatta (ISKCON). All Glories to Srila Prabhupada.</span>
+
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTop" title="Go to top">&#8593;</button>
+
+    <!-- JavaScript Files -->
+    <script src="js/animations.js"></script>
+    <script src="js/for-validation.js"></script>
+    <script src="js/logo.js"></script>
+    <script src="js/navbar.js"></script>
+
+    <script>
+        const backToTop = document.getElementById("backToTop");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <style>
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        #backToTop:hover {
+            background-color: #555;
+        }
+        .cta-button:hover {
+            background-color: #0066cc;
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .indicator {
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background-color: #bbb;
+            cursor: pointer;
+        }
+        .indicator.active {
+            background-color: #0066cc;
+        }
+    </style>
+
+</body>
+
+</html>

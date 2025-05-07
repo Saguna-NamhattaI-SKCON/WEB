@@ -1,0 +1,80 @@
+/* ================
+   ULTIMATE ENHANCEMENTS 
+   ================ */
+
+/* 1. Performance Boost */
+.event-image {
+    will-change: transform; /* GPU acceleration */
+    aspect-ratio: 16/9; /* Prevent layout shifts */
+  }
+  
+  /* 2. Print Styles */
+  @media print {
+    .essay-container {
+      padding: 0;
+      max-width: 100%;
+    }
+    
+    .btn {
+      display: none !important;
+    }
+    
+    body {
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+  }
+  
+  /* 3. Dark Mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --light: #1a1a1a;
+      --dark: #f0f0f0;
+      --text: #e0e0e0;
+      --text-light: #aaa;
+      --secondary: #9b59b6;
+    }
+    
+    .event-details {
+      background-color: #222;
+    }
+  }
+  
+  /* 4. Scroll Behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* 5. Font Loading */
+  @font-face {
+    font-family: 'Bhagavat';
+    src: url('/fonts/Bhagavat.woff2') format('woff2'),
+         url('/fonts/Bhagavat.woff') format('woff');
+    font-display: swap;
+  }
+  
+  /* 6. Focus-visible Polyfill */
+  .js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+  }
+  
+  /* 7. Interaction States */
+  .btn:active {
+    transform: translateY(1px);
+  }
+  
+  /* 8. Modern Layout Shortcuts */
+  .event-header {
+    padding: clamp(1rem, 5vw, 2rem);
+  }
+  
+  /* 9. Visited Link States */
+  a:visited {
+    opacity: 0.9;
+  }
+  
+  /* 10. Selection Styling */
+  ::selection {
+    background: var(--primary);
+    color: white;
+  }

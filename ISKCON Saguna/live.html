@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Saguna Namhatta (ISKCON), your spiritual home dedicated to spreading Lord Krishna's teachings and community service in West Bengal.">
+    <meta name="keywords" content="Saguna Namhatta (ISKCON) , Lord Krishna, Bhagavad Gita, Spiritual Counseling, Devotional Services, Community Service, Kirtan">
+    <meta name="author" content="Saguna Namhatta (ISKCON) Team">
+    <meta property="og:title" content="Saguna Namhatta (ISKCON) - Welcome">
+    <meta property="og:description" content="Your spiritual home dedicated to spreading Lord Krishna's teachings and enriching lives through devotion.">
+    <meta property="og:image" content="images/hero_image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Saguna Namhatta (ISKCON) - Welcome">
+    <meta name="twitter:description" content="Your spiritual home dedicated to spreading Lord Krishna's teachings.">
+    <meta name="twitter:image" content="images/hero_image.jpg">
+    <meta name="robots" content="index, follow">
+    <title>Saguna Namhatta (ISKCON) - Welcome</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- External CSS Files  -->
+    <link rel="stylesheet" href="css/live.css"
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/Base.css">
+    <link rel="stylesheet" href="css/Layout.css">
+    <link rel="stylesheet" href="css/logonavbar.css"
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/Tailwind.css">
+    <link rel="stylesheet" href="css/typography.css">
+</head>
+
+<body>
+<!-- Header -->
+  <header>
+   <center><h1 class="bounce";>Welcome to Saguna Namhatta (ISKCON)</h1></center> 
+   </header>
+   <!--- Navigationa Pannel with Logo -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="logo-container">
+          <picture>
+            <source srcset="images/Logo.png" type="image/png"> 
+            <img src="images/Logo.png" 
+                 class="logo" 
+                 alt="Saguna Namhatta (ISKCON) Logo"
+                 width="120" 
+                 height="48"
+                 loading="lazy">
+          </picture>
+          <span class="logo-title" aria-hidden="true" style="color: #B8860B ;">SAGUNA NAMHATTA (ISKCON)</span>
+        </div>
+      
+        <button class="menu-toggle" 
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="main-menu">
+          <span class="sr-only">Menu</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      
+        <ul class="navbar-nav" id="main-menu" role="navigation">
+          <li class="nav-item" role="none">
+            <a href="index.html" 
+               class="nav-link" 
+               role="menuitem"
+               aria-current="page">
+               <i class="fas fa-home" aria-hidden="true"></i>
+               Home
+            </a>
+          </li>
+          
+          <li class="nav-item dropdown" role="none">
+            <button class="nav-link"
+                    role="menuitem"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    id="products-menu">
+               <i class="fas fa-om" aria-hidden="true"></i>
+               Activities
+            </button>
+            
+            <ul class="dropdown-menu" 
+                role="menu"
+                aria-labelledby="products-menu">
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="about.html"
+                   role="menuitem">
+                   <i class="fas fa-temple" aria-hidden="true"></i>
+                   About Temple
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="events.html"
+                   role="menuitem">
+                   <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                   Festivals
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="services.html"
+                   role="menuitem">
+                   <i class="fas fa-hands-praying" aria-hidden="true"></i>
+                   Seva Opportunities
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="donations.html"
+                   role="menuitem">
+                   <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                   Donate
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="live.html"
+                   role="menuitem">
+                   <i class="fas fa-video" aria-hidden="true"></i>
+                   Live Darshan
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- Some External Things of Navbar( Java)-->
+      <!-- Optimized Font Awesome -->
+      <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-<HASH>"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer">
+      
+      <!-- Enhanced JavaScript -->
+      <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.querySelector('.navbar');
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.navbar-nav');
+        const dropdowns = document.querySelectorAll('.dropdown');
+      
+        // Mobile menu with debounce
+        const toggleMenu = (forceClose) => {
+          const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+          const shouldExpand = forceClose ? false : !isExpanded;
+          
+          toggle.setAttribute('aria-expanded', shouldExpand);
+          menu.classList.toggle('active', shouldExpand);
+          toggle.classList.toggle('active', shouldExpand);
+          navbar.classList.toggle('menu-open', shouldExpand);
+        };
+      
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleMenu();
+        });
+      
+        // Enhanced dropdown handling
+        const handleDropdown = (dropdown, open) => {
+          const trigger = dropdown.querySelector('[aria-haspopup]');
+          dropdown.classList.toggle('active', open);
+          trigger.setAttribute('aria-expanded', open);
+        };
+      
+        dropdowns.forEach(dropdown => {
+          const trigger = dropdown.querySelector('[aria-haspopup]');
+          
+          // Mobile touch handling
+          trigger.addEventListener('click', (e) => {
+            if (window.innerWidth < 1025) {
+              e.preventDefault();
+              handleDropdown(dropdown, !dropdown.classList.contains('active'));
+            }
+          });
+      
+          // Desktop hover with timeout
+          let hoverTimeout;
+          dropdown.addEventListener('mouseenter', () => {
+            if (window.innerWidth >= 1025) {
+              clearTimeout(hoverTimeout);
+              hoverTimeout = setTimeout(() => handleDropdown(dropdown, true), 150);
+            }
+          });
+      
+          dropdown.addEventListener('mouseleave', () => {
+            if (window.innerWidth >= 1025) {
+              clearTimeout(hoverTimeout);
+              hoverTimeout = setTimeout(() => handleDropdown(dropdown, false), 300);
+            }
+          });
+        });
+      
+        // Responsive close handling
+        const closeAll = () => {
+          toggleMenu(false);
+          dropdowns.forEach(d => handleDropdown(d, false));
+        };
+      
+        // Click outside handler
+        document.addEventListener('click', (e) => !navbar.contains(e.target) && closeAll());
+        document.addEventListener('keydown', (e) => e.key === 'Escape' && closeAll());
+        
+        // Window resize handler
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(closeAll, 250);
+        });
+      });
+      </script>
+<!-- Live Intro Section -->
+<section class="section" id="live-intro">
+    <div class="section-container">
+        <h2>Join Our Live Classes</h2>
+        <p>We offer spiritual learning through our live classes in Bengali every week. Our sessions cover various aspects of devotion, the Bhagavad Gita, and practical spirituality.</p>
+        <p>Classes are available for all levels, and we welcome everyone to join us on this journey of spiritual growth.</p>
+    </div>
+</section>
+
+<!-- Class Schedule -->
+<section class="section" id="class-schedule">
+    <div class="section-container">
+        <h2>Live Class Schedule</h2>
+        <p>Join us for our weekly live sessions:</p>
+        <ul class="schedule-list">
+            <li><span class="highlight">Day:</span> Wednesday</li>
+            <li><span class="highlight">Time:</span> 07:00 p.m - 08:00 p.m</li>
+            <li><span class="highlight">Language:</span> Bengali</li>
+        </ul>
+        <p class="reminder-text">Mark your calendar and join us for an enriching experience.</p>
+    </div>
+</section>
+
+<!-- How to Join -->
+<section class="section" id="how-to-join">
+    <div class="section-container">
+        <h2>How to Join the Live Classes</h2>
+        <div class="step-container">
+            <ol class="join-steps">
+                <li>Click on the "Join Live Classes" button below</li>
+                <li>We will direct you to our live streaming platform (YouTube, Zoom, or similar)</li>
+                <li>Subscribe to our channel for reminders and updates</li>
+            </ol>
+            <a href="https://www.youtube.com/@iskconraghunathpur?si=WXyxHMfzsTsslCcy" 
+               target="_blank" 
+               class="btn"
+               aria-label="Join live classes on YouTube">
+                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.79 1.54-1.73 1.94-.9.33-2.03.44-3.38.44H7.38c-1.35 0-2.48-.11-3.38-.44-.94-.4-1.48-1.04-1.73-1.94C2.16 15.8 2 14.19 2 12s.16-3.8.44-4.83c.25-.9.79-1.54 1.73-1.94C4.9 4.89 6.03 4.78 7.38 4.78h9.24c1.35 0 2.48.11 3.38.44.94.4 1.48 1.04 1.73 1.94z"/>
+                </svg>
+                Join Live Classes
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Class Recordings -->
+<section class="section" id="class-recordings">
+    <div class="section-container">
+        <h2>Watch Previous Sessions</h2>
+        <p>Access our spiritual archive anytime:</p>
+        <a href="https://www.youtube.com/@iskconraghunathpur?si=WXyxHMfzsTsslCcy" 
+           target="_blank" 
+           class="btn btn-secondary"
+           aria-label="View class recordings on YouTube">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M18 9.5V18c0 .5-.4 1-1 1H5c-.5 0-1-.5-1-1V6c0-.5.5-1 1-1h7.5l2 2H18c.5 0 1 .5 1 1v1.5M14 4l6 6v8c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h7l2 2z"/>
+            </svg>
+            View Recordings
+        </a>
+    </div>
+</section>
+<!-- Live Stream Section -->
+<section class="section" id="live-stream">
+    <div class="section-container">
+        <h2>Live Stream</h2>
+        <div class="video-grid">
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/live_stream?channel=@ISKCONRaghunathpur"
+                            title="ISKCON Raghunathpur YouTube Live Stream"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <div class="fb-video" 
+                         data-href="https://www.facebook.com/ISKCON-Raghunathpur/live"
+                         data-autoplay="true"
+                         data-allowfullscreen="true"
+                         aria-label="Facebook Live Stream">
+                        <div class="fb-placeholder">
+                            <p>Loading Facebook live stream...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <!-- Footer of page -->
+<footer class="iskcon-footer">
+    <div class="footer-container">
+        <!-- Grid Layout -->
+        <div class="footer-grid">
+            <!-- Spiritual Resources -->
+            <div class="footer-section">
+              <h4 class="slide-in-left text-gold">Spiritual Resources</h4>
+                <div class="slide-in-left">
+                  <ul class="footer-link"
+                    <li><a href="https://vedabase.io/en/library/bg/" class="footer-link">Bhagavad Gita</a></li>
+                    <li><a href="https://lakshminarayanlenasia.com/articles/ShriKrishnaPrayers.pdf" class="footer-link">Daily Prayers</a></li>
+                    <li><a href="https://iskcondesiretree.com/profiles/blogs/hare-krishna-calendar-2025" class="footer-link">Festival Calendar</a></li>
+                </ul>
+                </div>
+            </div>
+
+            <!-- Temple Info -->
+            <div class="footer-section">
+                <h4 class="slide-in-left">Temple Services</h4>
+                <div class="slide-in-left">
+                    <ul class="footer-link"
+                    <li><a href="donations.html" class="footer-link">Donate</a></li>
+                    <li><a href="contact.html" class="footer-link">Volunteer</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact </a></li>
+
+                </ul>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="slide-in-left">
+                <h4 class="slide-in-left">Connect With Us</h4>
+                <div class="slide-in-left">
+                  <div class=" footer-link">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+         </div>
+         
+
+        <!-- Copyright & Sacred Symbol -->
+        <div class="bounce">
+          <img src="images/Symbol.png" alt="ISKCON Raghunathpur symbol" class="symbol">
+          <style>
+          img {
+            border-radius: 15px; /* Adjust for more/less rounding */
+            overflow: hidden; /* Ensures no sharp edges */
+            display: block; /* Removes unwanted spacing */
+        }
+        </style>
+          <span style="font-size: 12px; color: #FFFDD0;">&copy; 2025 Saguna Hare Krishna Namhatta (ISKCON). All Glories to Srila Prabhupada.</span>
+
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTop" title="Go to top">&#8593;</button>
+
+    <!-- JavaScript Files -->
+    <script src="js/animations.js"></script>
+    <script src="js/for-validation.js"></script>
+    <script src="js/logo.js"></script>
+    <script src="js/navbar.js"></script>
+
+    <script>
+        const backToTop = document.getElementById("backToTop");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <style>
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        #backToTop:hover {
+            background-color: #555;
+        }
+        .cta-button:hover {
+            background-color: #0066cc;
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .indicator {
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background-color: #bbb;
+            cursor: pointer;
+        }
+        .indicator.active {
+            background-color: #0066cc;
+        }
+    </style>
+
+</body>
+
+</html>

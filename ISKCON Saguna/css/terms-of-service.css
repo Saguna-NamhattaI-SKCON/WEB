@@ -1,0 +1,112 @@
+/* 1️⃣ Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Clean and modern font */
+    color: #444; /* Default text color */
+    line-height: 1.7; /* Improved readability */
+    background-color: #e9ecef; /* Light grey background color */
+}
+
+/* 2️⃣ Header Styling */
+header {
+    background-color: #ffcc00; /* ISKCON yellow background */
+    color: #333; /* Dark text color for contrast */
+    text-align: center; /* Center the header content */
+    padding: 20px; /* Adequate space around the header content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+}
+
+.header-container {
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center the logo and title */
+    align-items: center; /* Center items vertically */
+}
+
+.logo-container img {
+    height: 50px; /* Logo height */
+    margin-right: 10px; /* Space between logo and title */
+}
+
+header h1 {
+    margin: 0; /* Remove margin to prevent unnecessary space */
+    font-size: 2.5rem; /* Larger text size for the header */
+    font-weight: 700; /* Bold font weight for emphasis */
+}
+
+/* 3️⃣ Container for the Main Content */
+.content-container {
+    max-width: 900px; /* Maximum width for better readability */
+    margin: 40px auto; /* Center the container horizontally with margin */
+    padding: 30px; /* Add padding around the content */
+    background-color: #ffffff; /* White background for the content */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    border-radius: 10px; /* Rounded corners for smooth edges */
+}
+
+/* 4️⃣ Headings Styling */
+h2, h3 {
+    color: #2a2a2a; /* Darker color for headings */
+    margin-bottom: 15px; /* Space below headings */
+}
+
+h2 {
+    font-size: 2rem; /* Size for main section headings */
+    border-bottom: 2px solid #ffcc00; /* Underline for emphasis */
+    padding-bottom: 5px; /* Space below the heading */
+}
+
+h3 {
+    font-size: 1.5rem; /* Size for subheadings */
+    margin-top: 20px; /* Space above subheadings */
+}
+
+/* 5️⃣ Text within the Container */
+.content-container p {
+    font-size: 1rem; /* Standard font size for paragraphs */
+    color: #333; /* Dark grey text color */
+    margin-bottom: 20px; /* Add space below the paragraph */
+}
+
+/* 6️⃣ List Styling */
+.content-container ul {
+    list-style-type: disc; /* Bullet points for lists */
+    margin-left: 20px; /* Indent list items */
+    margin-bottom: 20px; /* Space below the list */
+}
+
+/* 7️⃣ Footer Styling */
+footer {
+    background-color: #2a2a2a; /* Dark background for footer */
+    color: white; /* White text color for contrast */
+    text-align: center; /* Center text */
+    padding: 15px; /* Padding for footer */
+    position: relative; /* Position for footer */
+    width: 100%; /* Full width */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+footer p {
+    margin: 0; /* Remove margin */
+}
+
+/* 8️⃣ Link Styling */
+a {
+    color: #007acc; /* Blue color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    color: #005f99; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* 9️⃣ Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust container for smaller screens */
+    .content-container {
+        padding

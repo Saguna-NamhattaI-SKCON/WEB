@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Saguna Namhatta (ISKCON), your spiritual home dedicated to spreading Lord Krishna's teachings and community service in West Bengal.">
+    <meta name="keywords" content="Saguna Namhatta (ISKCON), Lord Krishna, Bhagavad Gita, Spiritual Counseling, Devotional Services, Community Service, Kirtan">
+    <meta name="author" content="Saguna Namhatta (ISKCON) Team">
+    <meta property="og:title" content="Saguna Namhatta (ISKCON) - Welcome">
+    <meta property="og:description" content="Your spiritual home dedicated to spreading Lord Krishna's teachings and enriching lives through devotion.">
+    <meta property="og:image" content="images/hero_image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Saguna Namhatta (ISKCON) - Welcome">
+    <meta name="twitter:description" content="Your spiritual home dedicated to spreading Lord Krishna's teachings.">
+    <meta name="twitter:image" content="images/hero_image.jpg">
+    <meta name="robots" content="index, follow">
+    <title>Saguna Namhatta (ISKCON) - Welcome</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- External CSS Files  -->
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/Base.css">
+    <link rel="stylesheet" href="css/Layout.css">
+    <link rel="stylesheet" href="css/logonavbar.css"
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/Tailwind.css">
+    <link rel="stylesheet" href="css/typography.css">
+</head>
+
+<body>
+
+ <!-- Header -->
+  <header>
+   <center><h1 class="bounce";>Welcome to Saguna Namhatta (ISKCON)</h1></center> 
+   </header>
+   <!--- Navigationa Pannel with Logo -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="logo-container">
+          <picture>
+            <source srcset="images/Logo.png" type="image/png"> 
+            <img src="images/Logo.png" 
+                 class="logo" 
+                 alt="ISKCON Raghunathpur Logo"
+                 width="120" 
+                 height="48"
+                 loading="lazy">
+          </picture>
+          <span class="logo-title" aria-hidden="true" style="color: #B8860B ;">SAGUNA NAMHATTA (ISKCON)</span>
+        </div>
+      
+        <button class="menu-toggle" 
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="main-menu">
+          <span class="sr-only">Menu</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      
+        <ul class="navbar-nav" id="main-menu" role="navigation">
+          <li class="nav-item" role="none">
+            <a href="index.html" 
+               class="nav-link" 
+               role="menuitem"
+               aria-current="page">
+               <i class="fas fa-home" aria-hidden="true"></i>
+               Home
+            </a>
+          </li>
+          
+          <li class="nav-item dropdown" role="none">
+            <button class="nav-link"
+                    role="menuitem"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    id="products-menu">
+               <i class="fas fa-om" aria-hidden="true"></i>
+               Activities
+            </button>
+            
+            <ul class="dropdown-menu" 
+                role="menu"
+                aria-labelledby="products-menu">
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="about.html"
+                   role="menuitem">
+                   <i class="fas fa-temple" aria-hidden="true"></i>
+                   About Temple
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="events.html"
+                   role="menuitem">
+                   <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                   Festivals
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="services.html"
+                   role="menuitem">
+                   <i class="fas fa-hands-praying" aria-hidden="true"></i>
+                   Seva Opportunities
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="donations.html"
+                   role="menuitem">
+                   <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                   Donate
+                </a>
+              </li>
+              <li class="nav-item" role="none">
+                <a class="nav-link" 
+                   href="live.html"
+                   role="menuitem">
+                   <i class="fas fa-video" aria-hidden="true"></i>
+                   Live Darshan
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- Some External Things of Navbar( Java)-->
+      <!-- Optimized Font Awesome -->
+      <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-<HASH>"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer">
+      
+      <!-- Enhanced JavaScript -->
+      <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.querySelector('.navbar');
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.navbar-nav');
+        const dropdowns = document.querySelectorAll('.dropdown');
+      
+        // Mobile menu with debounce
+        const toggleMenu = (forceClose) => {
+          const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+          const shouldExpand = forceClose ? false : !isExpanded;
+          
+          toggle.setAttribute('aria-expanded', shouldExpand);
+          menu.classList.toggle('active', shouldExpand);
+          toggle.classList.toggle('active', shouldExpand);
+          navbar.classList.toggle('menu-open', shouldExpand);
+        };
+      
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleMenu();
+        });
+      
+        // Enhanced dropdown handling
+        const handleDropdown = (dropdown, open) => {
+          const trigger = dropdown.querySelector('[aria-haspopup]');
+          dropdown.classList.toggle('active', open);
+          trigger.setAttribute('aria-expanded', open);
+        };
+      
+        dropdowns.forEach(dropdown => {
+          const trigger = dropdown.querySelector('[aria-haspopup]');
+          
+          // Mobile touch handling
+          trigger.addEventListener('click', (e) => {
+            if (window.innerWidth < 1025) {
+              e.preventDefault();
+              handleDropdown(dropdown, !dropdown.classList.contains('active'));
+            }
+          });
+      
+          // Desktop hover with timeout
+          let hoverTimeout;
+          dropdown.addEventListener('mouseenter', () => {
+            if (window.innerWidth >= 1025) {
+              clearTimeout(hoverTimeout);
+              hoverTimeout = setTimeout(() => handleDropdown(dropdown, true), 150);
+            }
+          });
+      
+          dropdown.addEventListener('mouseleave', () => {
+            if (window.innerWidth >= 1025) {
+              clearTimeout(hoverTimeout);
+              hoverTimeout = setTimeout(() => handleDropdown(dropdown, false), 300);
+            }
+          });
+        });
+      
+        // Responsive close handling
+        const closeAll = () => {
+          toggleMenu(false);
+          dropdowns.forEach(d => handleDropdown(d, false));
+        };
+      
+        // Click outside handler
+        document.addEventListener('click', (e) => !navbar.contains(e.target) && closeAll());
+        document.addEventListener('keydown', (e) => e.key === 'Escape' && closeAll());
+        
+        // Window resize handler
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(closeAll, 250);
+        });
+      });
+      </script>
+
+  <!-- Rath Yatra Event Details Section -->
+<main class="essay-container">
+<section id="rath-yatra-details" aria-labelledby="rath-yatra-heading">
+    <div class="section-container">
+        <h2 id="rath-yatra-heading" class="section-title">Rath Yatra Festival 2025</h2>
+
+        <!-- Event Banner with semantic improvements -->
+        <figure class="event-banner">
+            <img src="images/Banner.jpg" 
+                 alt="Colorful procession of Lord Jagannath's chariot during Rath Yatra" 
+                 class="event-banner-img"
+                 loading="lazy"
+                 width="1200"
+                 height="600">
+            <figcaption class="banner-caption">The sacred chariots of Lord Jagannath, Balabhadra and Subhadra</figcaption>
+        </figure>
+
+        <div class="event-highlights">
+            <div class="highlight-card">
+                <i class="fas fa-calendar-alt"></i>
+                <p><strong>Date:</strong> 27th June 2025 (Ashadha Shukla Dwitiya)</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-clock"></i>
+                <p><strong>Time:</strong> 10:00 AM - 5:00 PM</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-location-dot"></i>
+                <p><strong>Location:</strong> Jagannath Temple, Puri</p>
+            </div>
+        </div>
+
+        <article class="event-description">
+            <h3 class="subsection-title">The Sacred Journey of Lord Jagannath</h3>
+            <p>Rath Yatra, the Chariot Festival of Lord Jagannath, is one of the oldest and grandest Hindu festivals celebrated with immense devotion in Puri, Odisha. This spectacular procession commemorates the annual journey of Lord Jagannath, his brother Balabhadra, and sister Subhadra to their aunt's temple (Gundicha Temple).</p>
+            
+            <p>The festival symbolizes the Lord's desire to come out of the temple to bless all devotees, regardless of caste, creed, or religion. The massive, elaborately decorated chariots are pulled by thousands of devotees along the Bada Danda (Grand Road) amid chanting of hymns and beating of traditional drums.</p>
+        </article>
+
+        <!-- Event Schedule Section with improved semantics -->
+        <section class="event-schedule" aria-labelledby="schedule-heading">
+            <h3 id="schedule-heading" class="subsection-title">Schedule of Sacred Events</h3>
+            <div class="timeline">
+                <div class="timeline-event">
+                    <time datetime="10:00">10:00 AM</time>
+                    <div class="event-details">
+                        <h4>Mangala Alati & Pahandi Vijay</h4>
+                        <p>Ceremonial bringing of deities from sanctum to chariots</p>
+                    </div>
+                </div>
+                <div class="timeline-event">
+                    <time datetime="12:00">12:00 PM</time>
+                    <div class="event-details">
+                        <h4>Chhera Pahanra</h4>
+                        <p>Ritual sweeping of chariots by Gajapati Maharaja</p>
+                    </div>
+                </div>
+                <div class="timeline-event">
+                    <time datetime="14:00">2:00 PM</time>
+                    <div class="event-details">
+                        <h4>Prasad Distribution</h4>
+                        <p>Sacred Mahaprasad offering to devotees</p>
+                    </div>
+                </div>
+                <div class="timeline-event">
+                    <time datetime="17:00">5:00 PM</time>
+                    <div class="event-details">
+                        <h4>Sandhya Dhupa</h4>
+                        <p>Evening prayers and conclusion at Gundicha Temple</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Timer with semantic markup -->
+        <aside class="countdown-container" aria-label="Countdown to Rath Yatra">
+            <h4 class="countdown-title">Countdown to the Divine Journey:</h4>
+            <div id="countdown" role="timer" aria-live="polite">
+                <div class="countdown-unit">
+                    <span class="days">00</span>
+                    <span class="unit-label">Days</span>
+                </div>
+                <div class="countdown-unit">
+                    <span class="hours">00</span>
+                    <span class="unit-label">Hours</span>
+                </div>
+                <div class="countdown-unit">
+                    <span class="minutes">00</span>
+                    <span class="unit-label">Minutes</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Location Section with enhanced accessibility -->
+        <section class="event-location" aria-labelledby="location-heading">
+            <h3 id="location-heading" class="subsection-title">Sacred Route of the Chariots</h3>
+            <p>The grand procession covers the 3km Bada Danda from <strong>Shree Mandira</strong> to <strong>Gundicha Temple</strong>, passing these sacred sites:</p>
+            
+            <ul class="landmark-list">
+                <li>Singhadwara (Lion's Gate)</li>
+                <li>Balagandi (Starting point of chariot pulling)</li>
+                <li>Sahid Minar (Midway point)</li>
+                <li>Gundicha Temple (Final destination)</li>
+            </ul>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.125295087702!2d88.2354650741735!3d22.56012482370448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02772978a5d5d3%3A0xb3b8b8e03f6a3!2sRath%20Yatra!5e0!3m2!1sen!2sin!4v1615250037841!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="Map of Rath Yatra procession route in Puri"
+                    aria-label="Interactive map of Rath Yatra procession route">
+                </iframe>
+                <a href="https://maps.app.goo.gl/33Nrn6Crj5o4TR3MA" target="_blank" rel="noopener noreferrer" class="map-link">
+                    <i class="fas fa-map-location-dot" aria-hidden="true"></i> 
+                    <span>View Detailed Procession Route</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Call to Action with emotional appeal -->
+        <div class="cta-section">
+            <h3 class="cta-title">Experience the Divine Pull</h3>
+            <p class="cta-text">Witness millions of hands reaching for the sacred ropes, hearts united in devotion, as the Lord comes to bless all humanity. Whether you pull the chariot ropes or simply behold this cosmic spectacle, your soul will remember this moment forever.</p>
+            
+            <div class="cta-buttons">
+                <a href="#volunteer" class="cta-button primary">Join as Volunteer</a>
+                <a href="#donate" class="cta-button secondary">Support the Festival</a>
+            </div>
+            
+            <blockquote class="sacred-verse">
+                "The chariot of the body must be pulled by the ropes of wisdom and devotion."
+                <cite>- Skanda Purana</cite>
+            </blockquote>
+        </div>
+    </div>
+</section>
+</main>
+<!-- JavaScript for Countdown Timer -->
+<script>
+    // Set the date we're counting down to (June 27, 2025 10:00 AM)
+    const countDownDate = new Date("June 27, 2025 10:00:00").getTime();
+
+    // Update the countdown every 1 second
+    const countdownFunction = setInterval(function() {
+        // Get today's date and time
+        const now = new Date().getTime();
+        
+        // Find the distance between now and the countdown date
+        const distance = countDownDate - now;
+        
+        // Time calculations for days, hours, minutes and seconds
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Output the result
+        document.getElementById("days").textContent = days.toString().padStart(2, '0');
+        document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+        document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+        document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+        
+        // If the countdown is over
+        if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.getElementById("countdown").innerHTML = "<div class='countdown-ended'>The Rath Yatra has begun! Jai Jagannath!</div>";
+        }
+    }, 1000);
+</script>
+
+<!-- CSS for Countdown Timer -->
+<style>
+    .countdown-container {
+        text-align: center;
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background-color: #f8f1e9;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .countdown-title {
+        font-size: 1.5rem;
+        color: #d35400;
+        margin-bottom: 1rem;
+        font-family: 'Arial', sans-serif;
+    }
+
+    #countdown {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .countdown-unit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 80px;
+    }
+
+    .countdown-unit span:first-child {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #e67e22;
+        background: white;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .unit-label {
+        font-size: 1rem;
+        color: #7f8c8d;
+        margin-top: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .countdown-ended {
+        font-size: 1.5rem;
+        color: #27ae60;
+        font-weight: bold;
+        padding: 1rem;
+    }
+
+    @media (max-width: 600px) {
+        .countdown-unit {
+            min-width: 60px;
+        }
+        .countdown-unit span:first-child {
+            font-size: 1.8rem;
+        }
+        .unit-label {
+            font-size: 0.8rem;
+        }
+    }
+</style>
+
+  <!-- Footer of page -->
+<footer class="iskcon-footer">
+    <div class="footer-container">
+        <!-- Grid Layout -->
+        <div class="footer-grid">
+            <!-- Spiritual Resources -->
+            <div class="footer-section">
+              <h4 class="slide-in-left text-gold">Spiritual Resources</h4>
+                <div class="slide-in-left">
+                  <ul class="footer-link"
+                    <li><a href="https://vedabase.io/en/library/bg/" class="footer-link">Bhagavad Gita</a></li>
+                    <li><a href="https://lakshminarayanlenasia.com/articles/ShriKrishnaPrayers.pdf" class="footer-link">Daily Prayers</a></li>
+                    <li><a href="https://iskcondesiretree.com/profiles/blogs/hare-krishna-calendar-2025" class="footer-link">Festival Calendar</a></li>
+                </ul>
+                </div>
+            </div>
+
+            <!-- Temple Info -->
+            <div class="footer-section">
+                <h4 class="slide-in-left">Temple Services</h4>
+                <div class="slide-in-left">
+                    <ul class="footer-link"
+                    <li><a href="donations.html" class="footer-link">Donate</a></li>
+                    <li><a href="contact.html" class="footer-link">Volunteer</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact </a></li>
+
+                </ul>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="slide-in-left">
+                <h4 class="slide-in-left">Connect With Us</h4>
+                <div class="slide-in-left">
+                  <div class=" footer-link">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+         </div>
+         
+
+        <!-- Copyright & Sacred Symbol -->
+        <div class="bounce">
+          <img src="images/Symbol.png" alt="Saguna Namhatta (ISKCON) symbol" class="symbol">
+          <style>
+          img {
+            border-radius: 15px; /* Adjust for more/less rounding */
+            overflow: hidden; /* Ensures no sharp edges */
+            display: block; /* Removes unwanted spacing */
+        }
+        </style>
+          <span style="font-size: 12px; color: #FFFDD0;">&copy; 2025 Saguna Hare Krishna Namhatta (ISKCON). All Glories to Srila Prabhupada.</span>
+
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTop" title="Go to top">&#8593;</button>
+
+    <!-- JavaScript Files -->
+    <script src="js/animations.js"></script>
+    <script src="js/for-validation.js"></script>
+    <script src="js/logo.js"></script>
+    <script src="js/navbar.js"></script>
+
+    <script>
+        const backToTop = document.getElementById("backToTop");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <style>
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        #backToTop:hover {
+            background-color: #555;
+        }
+        .cta-button:hover {
+            background-color: #0066cc;
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .indicator {
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background-color: #bbb;
+            cursor: pointer;
+        }
+        .indicator.active {
+            background-color: #0066cc;
+        }
+    </style>
+
+</body>
+
+</html>

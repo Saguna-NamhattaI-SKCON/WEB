@@ -1,0 +1,110 @@
+/* 1️⃣ Event Listing Layout */
+
+/* a) Event Container */
+.event-container {
+    width: 80%; /* Responsive width */
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding around the content */
+    background-color: #f7f7f7; /* Light gray background */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 40px; /* Space between event containers */
+}
+
+/* 2️⃣ Event Cards */
+
+/* a) Card Design */
+.event-card {
+    width: 100%; /* Full width on mobile */
+    max-width: 45%; /* 45% width on larger screens */
+    padding: 15px; /* Padding inside the card */
+    border-radius: 10px; /* Slightly rounded corners */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    margin: 20px; /* Space between cards */
+    transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+.event-card:hover {
+    transform: scale(1.02); /* Slight scale effect on hover */
+}
+
+/* b) Event Card Header (Event Title & Date) */
+.event-card h3 {
+    font-size: 20px; /* Title font size */
+    font-weight: bold; /* Bold title */
+    color: #333; /* Dark gray for title */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.event-card .event-date {
+    font-size: 16px; /* Date font size */
+    color: #aaa; /* Lighter gray for date */
+}
+
+/* c) Event Card Description */
+.event-card p {
+    font-size: 14px; /* Description font size */
+    color: #555; /* Neutral dark gray */
+    line-height: 1.6; /* Comfortable line spacing */
+    margin: 10px 0; /* Space around description */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Ellipsis for overflow text */
+    display: -webkit-box; /* For ellipsis effect */
+    -webkit-box-orient: vertical; /* For ellipsis effect */
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+}
+
+/* d) Event Card Button (RSVP / Register) */
+.event-card .rsvp-button {
+    background-color: #007bff; /* Primary color */
+    color: #fff; /* White text */
+    font-size: 16px; /* Button font size */
+    padding: 12px 24px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Transition for hover */
+}
+
+.event-card .rsvp-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* 3️⃣ Event Details Page */
+
+/* a) Page Container */
+.event-details {
+    width: 80%; /* Responsive width */
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 40px; /* Padding for content */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+/* b) Event Title and Date */
+.event-details h1 {
+    font-size: 32px; /* Title font size */
+    font-weight: bold; /* Bold title */
+    color: #333; /* Dark gray for title */
+    margin-top: 20px; /* Space above title */
+}
+
+.event-details .event-date {
+    font-size: 20px; /* Date font size */
+    color: #666; /* Medium gray for date */
+    margin-top: 10px; /* Space above date */
+}
+
+/* c) Event Description */
+.event-details p {
+    font-size: 18px; /* Description font size */
+    line-height: 1.7; /* Comfortable line height */
+    color: #333; /* Dark gray for text */
+    margin: 20px 0; /* Space around description */
+}
+
+/* d) Event Image */
+.event-details img {
+    width: 100%; /* Full width of container */
+    max-height: 
